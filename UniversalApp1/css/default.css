@@ -16,6 +16,17 @@
     display: flex;
 }
 
+.win-button
+{
+
+width:100%;
+
+}
+
+.win-scrollview
+{
+    height:600px;
+}
     .smallListIconTextItem img.smallListIconTextItem-Image 
     {
         width: 60px;
