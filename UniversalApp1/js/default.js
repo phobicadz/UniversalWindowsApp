@@ -21,8 +21,8 @@
                 // Add Events Listeners here
 			    var button1 = document.getElementById("MyButton");
 			    button1.addEventListener("click", MyButtonClicked, false);
-
 			    ctlDialog.addEventListener("afterhide", DialogDismissed, false);
+			    listView.addEventListener("selectionchanged", SelectionChanged, false);
 
 			//    buttonOK.addEventListener("click", OKButtonClicked, false);
 
@@ -82,6 +82,24 @@
         // bit of jQuery to set output paragraph
         $("#outputParagraph").html(Disimissal);
     }
+
+    function SelectionChanged(eventInfo) {
+
+        // jQuery like selector thats built into WinJS
+       // var lView =  document.getElementById("listView").winControl;
+        var lView = $("#listView")[0].winControl;
+
+        lView.selection.getItems().then(function (items) {
+            // do something with the selected item
+            $("#outputParagraph").html(items[0].data.title);
+      //      console.log(items[0].data);
+        });
+
+     
+
+    }
+
+
 
     WinJS.UI.processAll();
 
