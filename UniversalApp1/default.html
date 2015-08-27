@@ -12,6 +12,8 @@
     <!-- UniversalApp1 references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/default.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+
 </head>
 <body class="win-type-body win-ui-light">
     <div class="win-scrollview win-wide">
@@ -41,15 +43,18 @@
         </div>
     </div>
 
+
+    <!-- Silly Button -->
     <div style="padding:10px;">
         <button id="MyButton" class="win-button">
             Click me!
         </button>
         <p id="outputParagraph"></p>
+        <img id="imageHolder" alt="" src="images/LockScreenLogo.scale-200.png" />
     </div>
 
     <!-- Cheeky dialog -->
-    <div data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+    <div id="ctlDialog" data-win-control="WinJS.UI.ContentDialog" data-win-options="{
              title: 'Main instruction',
              primaryCommandText: 'button1',
              secondaryCommandText: 'button2'

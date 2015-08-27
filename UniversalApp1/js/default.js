@@ -21,14 +21,15 @@
                 // Add Events Listeners here
 			    var button1 = document.getElementById("MyButton");
 			    button1.addEventListener("click", MyButtonClicked, false);
+			    ctlDialog.addEventListener("afterhide", DialogDismissed, false);
+			    listView.addEventListener("selectionchanged", SelectionChanged, false);
+
+			//    buttonOK.addEventListener("click", OKButtonClicked, false);
 
 			}));
-
-
 			//args.setPromise(WinJS.UI.processAll());
 		}
 	};
-
 
 	app.oncheckpoint = function (args) {
 		// TODO: This application is about to be suspended. Save any state that needs to persist across suspensions here.
@@ -66,11 +67,32 @@
 
 
     function MyButtonClicked(eventInfo) {
-        document.getElementById("outputParagraph").innerText = "Click!";
+
+        $("#outputParagraph").html("Clicked!");
+
         var contentDialog = document.querySelector(".win-contentdialog").winControl;
         contentDialog.show();
     }
 
+    function DialogDismissed(eventInfo) {
+        // find out which button was pressed
+        var Disimissal = eventInfo.detail.result;
+       
+        // bit of jQuery to set output paragraph
+        $("#outputParagraph").html(Disimissal);
+    }
+
+    function SelectionChanged(eventInfo) {
+
+        var lView = $("#listView")[0].winControl;
+
+        lView.selection.getItems().then(function (items) {
+            // do something with the selected item
+            $("#outputParagraph").html(items[0].data.title);
+            $("#imageHolder").src = items[0].data.picture;
+      //      console.log(items[0].data);
+        });
+    }
 
     WinJS.UI.processAll();
 
