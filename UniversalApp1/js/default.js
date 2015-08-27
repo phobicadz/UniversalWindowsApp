@@ -22,9 +22,11 @@
 			    var button1 = document.getElementById("MyButton");
 			    button1.addEventListener("click", MyButtonClicked, false);
 
+			    ctlDialog.addEventListener("afterhide", DialogDismissed, false);
+
+			//    buttonOK.addEventListener("click", OKButtonClicked, false);
+
 			}));
-
-
 			//args.setPromise(WinJS.UI.processAll());
 		}
 	};
@@ -66,11 +68,20 @@
 
 
     function MyButtonClicked(eventInfo) {
-        document.getElementById("outputParagraph").innerText = "Click!";
+
+        $("#outputParagraph").html("Clicked!");
+
         var contentDialog = document.querySelector(".win-contentdialog").winControl;
         contentDialog.show();
     }
 
+    function DialogDismissed(eventInfo) {
+        // find out which button was pressed
+        var Disimissal = eventInfo.detail.result;
+       
+        // bit of jQuery to set output paragraph
+        $("#outputParagraph").html(Disimissal);
+    }
 
     WinJS.UI.processAll();
 
