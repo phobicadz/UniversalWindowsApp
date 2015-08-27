@@ -31,7 +31,6 @@
 		}
 	};
 
-
 	app.oncheckpoint = function (args) {
 		// TODO: This application is about to be suspended. Save any state that needs to persist across suspensions here.
 		// You might use the WinJS.Application.sessionState object, which is automatically saved and restored across suspension.
@@ -85,21 +84,15 @@
 
     function SelectionChanged(eventInfo) {
 
-        // jQuery like selector thats built into WinJS
-       // var lView =  document.getElementById("listView").winControl;
         var lView = $("#listView")[0].winControl;
 
         lView.selection.getItems().then(function (items) {
             // do something with the selected item
             $("#outputParagraph").html(items[0].data.title);
+            $("#imageHolder").src = items[0].data.picture;
       //      console.log(items[0].data);
         });
-
-     
-
     }
-
-
 
     WinJS.UI.processAll();
 
