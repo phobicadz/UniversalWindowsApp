@@ -54,7 +54,7 @@
     var items = [];
 
     // Generate 160 items
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < 3; i++) {
         itemArray.forEach(function (item) {
             items.push(item);
         });
