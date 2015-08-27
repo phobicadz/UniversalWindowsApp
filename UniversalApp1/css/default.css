@@ -3,6 +3,12 @@
 
 }
 
+#pictureHolder
+{
+    background-image:url(../images/LockScreenLogo.scale-200.png);
+    width:80px;
+    height:80px;
+}
 
 /* Template for the items in the ListViews in this sample */       
 .smallListIconTextItem

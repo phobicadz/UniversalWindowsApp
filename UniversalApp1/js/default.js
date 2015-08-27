@@ -80,6 +80,7 @@
        
         // bit of jQuery to set output paragraph
         $("#outputParagraph").html(Disimissal);
+        $("#pictureHolder").css('background-image', 'url("")');
     }
 
     function SelectionChanged(eventInfo) {
@@ -89,8 +90,7 @@
         lView.selection.getItems().then(function (items) {
             // do something with the selected item
             $("#outputParagraph").html(items[0].data.title);
-            $("#imageHolder").src = items[0].data.picture;
-      //      console.log(items[0].data);
+            $("#pictureHolder").css('background-image', 'url(' + items[0].data.picture + ')');
         });
     }
 
