@@ -5,6 +5,7 @@
 
 	var app = WinJS.Application;
 	var activation = Windows.ApplicationModel.Activation;
+	var splitView;
 
 	app.onactivated = function (args) {
 		if (args.detail.kind === activation.ActivationKind.launch) {
@@ -17,6 +18,18 @@
 			}
 
 			args.setPromise(WinJS.UI.processAll().done(function () {
+
+			    splitView = document.querySelector("#root").winControl;
+			    splitView.onbeforeclose = function () { WinJS.Utilities.addClass(splitView.element, "hiding"); };
+			    splitView.onafterclose = function () { WinJS.Utilities.removeClass(splitView.element, "hiding"); };
+			 //   window.addEventListener("resize", handleResize);
+			   // handleResize();
+
+               //split view buttons hide/show panel
+			    var buttons = document.querySelectorAll(".splitViewButton");
+			    for (var i = 0, len = buttons.length; i < len; i++) {
+			        buttons[i].addEventListener("click", handleSplitViewButton);
+			    }
 
                 // Add Events Listeners here
 			    var button1 = document.getElementById("MyButton");
@@ -93,6 +106,11 @@
             $("#pictureHolder").css('background-image', 'url(' + items[0].data.picture + ')');
         });
     }
+
+    function handleSplitViewButton() {
+        splitView.paneOpened = !splitView.paneOpened;
+    }
+
 
     WinJS.UI.processAll();
 
