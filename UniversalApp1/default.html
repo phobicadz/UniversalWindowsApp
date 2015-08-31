@@ -15,8 +15,8 @@
     <script src="/js/jquery-2.1.4.min.js"></script>
 
 </head>
-<body class="win-type-body win-ui-light">
-    <div id="root" data-win-control="WinJS.UI.SplitView" data-win-options="{ paneHidden: true }" >
+<body role="application" class="win-type-body win-ui-light">
+    <div id="root" data-win-control="WinJS.UI.SplitView" data-win-options="{ paneHidden: false }" >
         <div>
             <button type="button" class="splitViewButton win-button"></button>
             <div id="header" role="contentinfo" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/header.html'}"></div>
@@ -82,6 +82,6 @@
         You can use this area to provide more detail or define terminology. Don't repeat the main instruction
         with slightly different wording.
     </div>
-    </div>
+</div>    
 </body>
 </html>

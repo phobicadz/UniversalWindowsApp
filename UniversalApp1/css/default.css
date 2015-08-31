@@ -94,7 +94,8 @@ button.splitViewButton {
     }
 
 .win-splitview-pane-closed #header,
-.win-splitview-pane-closed #footer {
+.win-splitview-pane-closed #footer, 
+.win-splitview-pane-closed #scenarioPane {
     display: none;
 }
 
