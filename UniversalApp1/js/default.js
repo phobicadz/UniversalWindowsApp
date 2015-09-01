@@ -94,6 +94,8 @@
         });
     }
 
+    WinJS.Navigation.navigate()
+
     WinJS.UI.processAll();
 
     app.start();
