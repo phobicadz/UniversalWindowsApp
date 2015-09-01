@@ -7,6 +7,7 @@
 	var activation = Windows.ApplicationModel.Activation;
 	var splitView;
 
+    // define page variables ???
 	WinJS.Namespace.define("MyFirstWUA", {
 	    paneHiddenInitially: false
 	});
