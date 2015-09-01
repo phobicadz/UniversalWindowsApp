@@ -5,6 +5,11 @@
 
 	var app = WinJS.Application;
 	var activation = Windows.ApplicationModel.Activation;
+	var splitView;
+
+	WinJS.Namespace.define("MyFirstWUA", {
+	    paneHiddenInitially: false
+	});
 
 	app.onactivated = function (args) {
 		if (args.detail.kind === activation.ActivationKind.launch) {
@@ -16,7 +21,21 @@
 				// To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
 			}
 
+			MyFirstWUA.paneHiddenInitially = window.innerWidth <= 768;
+
 			args.setPromise(WinJS.UI.processAll().done(function () {
+
+			    splitView = document.querySelector("#root").winControl;
+			    splitView.onbeforeclose = function () { WinJS.Utilities.addClass(splitView.element, "hiding"); };
+			    splitView.onafterclose = function () { WinJS.Utilities.removeClass(splitView.element, "hiding"); };
+			    window.addEventListener("resize", handleResize);
+			    handleResize();
+
+               //split view buttons hide/show panel
+			    var buttons = document.querySelectorAll(".splitViewButton");
+			    for (var i = 0, len = buttons.length; i < len; i++) {
+			        buttons[i].addEventListener("click", handleSplitViewButton);
+			    }
 
                 // Add Events Listeners here
 			    var button1 = document.getElementById("MyButton");
@@ -38,16 +57,27 @@
 	};
 
    // move this to web api as a test
+    //var itemArray = [
+    //    { title: "Marvelous Mint", text: "Gelato", picture: "/images/fruits/60Mint.png" },
+    //    { title: "Succulent Strawberry", text: "Sorbet", picture: "/images/fruits/60Strawberry.png" },
+    //    { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
+    //    { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" },
+    //    { title: "Creamy Orange", text: "Sorbet", picture: "/images/fruits/60Orange.png" },
+    //    { title: "Very Vanilla", text: "Ice Cream", picture: "/images/fruits/60Vanilla.png" },
+    //    { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
+    //    { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" }
+    //];
+
     var itemArray = [
-        { title: "Marvelous Mint", text: "Gelato", picture: "/images/fruits/60Mint.png" },
-        { title: "Succulent Strawberry", text: "Sorbet", picture: "/images/fruits/60Strawberry.png" },
-        { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
-        { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" },
-        { title: "Creamy Orange", text: "Sorbet", picture: "/images/fruits/60Orange.png" },
-        { title: "Very Vanilla", text: "Ice Cream", picture: "/images/fruits/60Vanilla.png" },
-        { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
-        { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" }
-];
+    { title: "Marvelous Mint", text: "Gelato", picture: "/images/StoreLogo.png" },
+    { title: "Succulent Strawberry", text: "Sorbet", picture: "/images/StoreLogo.png" },
+    { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/StoreLogo.png" },
+    { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/StoreLogo.png" },
+    { title: "Creamy Orange", text: "Sorbet", picture: "/images/StoreLogo.png" },
+    { title: "Very Vanilla", text: "Ice Cream", picture: "/images/StoreLogo.png" },
+    { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/StoreLogo.png" },
+    { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/StoreLogo.png" }
+    ];
 
     // use this to connect to web apis....http://blogs.msdn.com/b/zkap/archive/2013/10/02/consume-asp-net-web-api-from-html-application-using-winjs-xhr.aspx
    // WinJS.xhr
@@ -55,7 +85,7 @@
     var items = [];
 
     // Generate 160 items
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < 3; i++) {
         itemArray.forEach(function (item) {
             items.push(item);
         });
@@ -80,6 +110,7 @@
        
         // bit of jQuery to set output paragraph
         $("#outputParagraph").html(Disimissal);
+        $("#pictureHolder").css('background-image', 'url("")');
     }
 
     function SelectionChanged(eventInfo) {
@@ -89,10 +120,26 @@
         lView.selection.getItems().then(function (items) {
             // do something with the selected item
             $("#outputParagraph").html(items[0].data.title);
-            $("#imageHolder").src = items[0].data.picture;
-      //      console.log(items[0].data);
+            $("#pictureHolder").css('background-image', 'url(' + items[0].data.picture + ')');
         });
     }
+
+    function handleSplitViewButton() {
+        splitView.paneOpened = !splitView.paneOpened;
+    }
+
+
+    function handleResize() {
+        if (window.innerWidth > 768) {
+            splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;
+            splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.inline;
+        } else {
+            splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;
+            splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.overlay;
+            splitView.closePane();
+        }
+    }
+
 
     WinJS.UI.processAll();
 

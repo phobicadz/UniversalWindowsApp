@@ -15,56 +15,71 @@
     <script src="/js/jquery-2.1.4.min.js"></script>
 
 </head>
-<body class="win-type-body win-ui-light">
-    <div class="win-scrollview win-wide">
-        <!-- Define a layout for the app -->
-        <!-- Simple template for the ListView instantiation  -->
-        <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
-            <div class="smallListIconTextItem">
-                <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
-                <div class="smallListIconTextItem-Detail">
-                    <h4 class="win-h4" data-win-bind="textContent: title"></h4>
-                    <h6 class="win-h6" data-win-bind="textContent: text"></h6>
+<body role="application" class="win-type-body win-ui-light">
+    <div id="root" data-win-control="WinJS.UI.SplitView" data-win-options="{ paneHidden: MyFirstWUA.paneHiddenInitially }">
+        <div>
+            <button type="button" class="splitViewButton win-button"></button>
+            <div id="header" role="contentinfo" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/header.html'}"></div>
+            <div id="scenarioPane" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/options.html'}"></div>
+            <!--<div id="footer" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/sample-utils/footer.html'}"></div>-->
+        </div>
+
+
+        <button type="button" class="splitViewButton win-button"></button>
+        <div id="contentWrapper">
+            <div id="contentHost">
+                <div class="win-scrollview win-wide">
+                    <!-- Define a layout for the app -->
+                    <!-- Simple template for the ListView instantiation  -->
+                    <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+                        <div class="smallListIconTextItem">
+                            <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
+                            <div class="smallListIconTextItem-Detail">
+                                <h4 class="win-h4" data-win-bind="textContent: title"></h4>
+                                <h6 class="win-h6" data-win-bind="textContent: text"></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The declarative markup necesary for ListView instantiation -->
+                    <!-- Call WinJS.UI.processAll() in your initialization code -->
+                    <div id="listView"
+                         class="win-selectionstylefilled"
+                         data-win-control="WinJS.UI.ListView"
+                         data-win-options="{
+                                        itemDataSource: Sample.ListView.data.dataSource,
+                                        itemTemplate: select('.smallListIconTextTemplate'),
+                                        selectionMode: 'single',
+                                        tapBehavior: 'toggleSelect',
+                                        layout: { type: WinJS.UI.ListLayout } }">
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- The declarative markup necesary for ListView instantiation -->
-        <!-- Call WinJS.UI.processAll() in your initialization code -->
-        <div id="listView"
-             class="win-selectionstylefilled"
-             data-win-control="WinJS.UI.ListView"
-             data-win-options="{
-            itemDataSource: Sample.ListView.data.dataSource,
-            itemTemplate: select('.smallListIconTextTemplate'),
-            selectionMode: 'single',
-            tapBehavior: 'toggleSelect',
-            layout: { type: WinJS.UI.ListLayout } }">
-        </div>
-    </div>
+                <!-- Silly Button -->
+                <div style="padding:10px;">
+                    <button id="MyButton" class="win-button">
+                        Click me!
+                    </button>
+                    <p id="outputParagraph"></p>
+                    <div id="pictureHolder"></div>
+                </div>
 
-
-    <!-- Silly Button -->
-    <div style="padding:10px;">
-        <button id="MyButton" class="win-button">
-            Click me!
-        </button>
-        <p id="outputParagraph"></p>
-
-        <div id="imageHolder">.</div>
-        
-    </div>
-
-    <!-- Cheeky dialog -->
-    <div id="ctlDialog" data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+                <!-- Cheeky dialog -->
+                <div id="ctlDialog" data-win-control="WinJS.UI.ContentDialog" data-win-options="{
              title: 'Main instruction',
              primaryCommandText: 'button1',
              secondaryCommandText: 'button2'
         }">
-        Use the content area to present additional information helpful to understanding or using the dialog.
-        You can use this area to provide more detail or define terminology. Don't repeat the main instruction
-        with slightly different wording.
+                    Use the content area to present additional information helpful to understanding or using the dialog.
+                    You can use this area to provide more detail or define terminology. Don't repeat the main instruction
+                    with slightly different wording.
+                </div>
+            </div>
+            <div id="statusBox">
+                Status:
+                <div id="statusMessage"></div>
+            </div>
+        </div> 
     </div>
-    
 </body>
 </html>
