@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <div class="win-scrollview">
+            <!-- Define a layout for the app -->
+            <!-- Simple template for the ListView instantiation  -->
+            <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+                <div class="smallListIconTextItem">
+                    <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
+                    <div class="smallListIconTextItem-Detail">
+                        <h4 class="win-h4" data-win-bind="textContent: title"></h4>
+                        <h6 class="win-h6" data-win-bind="textContent: text"></h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The declarative markup necesary for ListView instantiation -->
+            <!-- Call WinJS.UI.processAll() in your initialization code -->
+            <div id="listView"
+                 class="win-selectionstylefilled"
+                 data-win-control="WinJS.UI.ListView"
+                 data-win-options="{
+                                        itemDataSource: Sample.ListView.data.dataSource,
+                                        itemTemplate: select('.smallListIconTextTemplate'),
+                                        selectionMode: 'single',
+                                        tapBehavior: 'toggleSelect',
+                                        layout: { type: WinJS.UI.ListLayout } }">
+            </div>
+        </div>
+
+        <!-- Silly Button -->
+        <div style="padding:10px;">
+            <button id="MyButton" class="win-button">
+                Click me!
+            </button>
+            <p id="outputParagraph"></p>
+            <div id="pictureHolder"></div>
+        </div>
+
+        <!-- Cheeky dialog -->
+        <div id="ctlDialog" data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+             title: 'Main instruction',
+             primaryCommandText: 'button1',
+             secondaryCommandText: 'button2'
+        }">
+            Use the content area to present additional information helpful to understanding or using the dialog.
+            You can use this area to provide more detail or define terminology. Don't repeat the main instruction
+            with slightly different wording.
+        </div>
+    </div>
+</body>
+</html>

@@ -4,6 +4,7 @@
 	"use strict";
 
 	var app = WinJS.Application;
+	var nav = WinJS.Navigation;
 	var activation = Windows.ApplicationModel.Activation;
 	var splitView;
 
@@ -39,10 +40,10 @@
 			    }
 
                 // Add Events Listeners here
-			    var button1 = document.getElementById("MyButton");
-			    button1.addEventListener("click", MyButtonClicked, false);
-			    ctlDialog.addEventListener("afterhide", DialogDismissed, false);
-			    listView.addEventListener("selectionchanged", SelectionChanged, false);
+			    //var button1 = document.getElementById("MyButton");
+			    //button1.addEventListener("click", MyButtonClicked, false);
+			    //ctlDialog.addEventListener("afterhide", DialogDismissed, false);
+			    //listView.addEventListener("selectionchanged", SelectionChanged, false);
 
 			//    buttonOK.addEventListener("click", OKButtonClicked, false);
 
@@ -58,26 +59,15 @@
 	};
 
    // move this to web api as a test
-    //var itemArray = [
-    //    { title: "Marvelous Mint", text: "Gelato", picture: "/images/fruits/60Mint.png" },
-    //    { title: "Succulent Strawberry", text: "Sorbet", picture: "/images/fruits/60Strawberry.png" },
-    //    { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
-    //    { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" },
-    //    { title: "Creamy Orange", text: "Sorbet", picture: "/images/fruits/60Orange.png" },
-    //    { title: "Very Vanilla", text: "Ice Cream", picture: "/images/fruits/60Vanilla.png" },
-    //    { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
-    //    { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" }
-    //];
-
     var itemArray = [
-    { title: "Marvelous Mint", text: "Gelato", picture: "/images/StoreLogo.png" },
-    { title: "Succulent Strawberry", text: "Sorbet", picture: "/images/StoreLogo.png" },
-    { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/StoreLogo.png" },
-    { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/StoreLogo.png" },
-    { title: "Creamy Orange", text: "Sorbet", picture: "/images/StoreLogo.png" },
-    { title: "Very Vanilla", text: "Ice Cream", picture: "/images/StoreLogo.png" },
-    { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/StoreLogo.png" },
-    { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/StoreLogo.png" }
+        { title: "Marvelous Mint", text: "Gelato", picture: "/images/fruits/60Mint.png" },
+        { title: "Succulent Strawberry", text: "Sorbet", picture: "/images/fruits/60Strawberry.png" },
+        { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
+        { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" },
+        { title: "Creamy Orange", text: "Sorbet", picture: "/images/fruits/60Orange.png" },
+        { title: "Very Vanilla", text: "Ice Cream", picture: "/images/fruits/60Vanilla.png" },
+        { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
+        { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" }
     ];
 
     // use this to connect to web apis....http://blogs.msdn.com/b/zkap/archive/2013/10/02/consume-asp-net-web-api-from-html-application-using-winjs-xhr.aspx
@@ -125,6 +115,32 @@
         });
     }
 
+    function navigating(eventObject) {
+        var url = eventObject.detail.location;
+        var host = document.getElementById("contentHost");
+        // Call unload and dispose methods on current scenario, if any exist
+        if (host.winControl) {
+            host.winControl.unload && host.winControl.unload();
+            host.winControl.dispose && host.winControl.dispose();
+        }
+        WinJS.Utilities.disposeSubTree(host);
+        WinJS.Utilities.empty(host);
+        WinJS.log && WinJS.log("", "", "status");
+
+        var p = WinJS.UI.Pages.render(url, host, eventObject.detail.state).
+            then(function () {
+                var navHistory = nav.history;
+                app.sessionState.navigationHistory = {
+                    backStack: navHistory.backStack.slice(0),
+                    forwardStack: navHistory.forwardStack.slice(0),
+                    current: navHistory.current
+                };
+                app.sessionState.lastUrl = url;
+            });
+        p.done();
+        eventObject.detail.setPromise(p);
+    }
+
     function handleSplitViewButton() {
         splitView.paneOpened = !splitView.paneOpened;
     }
@@ -141,7 +157,7 @@
         }
     }
 
-
+    nav.addEventListener("navigating", navigating);
     WinJS.UI.processAll();
 
     app.start();

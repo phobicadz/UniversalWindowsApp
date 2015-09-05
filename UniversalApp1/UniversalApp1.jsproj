@@ -60,8 +60,11 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="default.html" />
+    <Content Include="html\content.html" />
+    <Content Include="html\footer.html" />
     <Content Include="html\header.html" />
     <Content Include="html\options.html" />
+    <Content Include="html\Page1.html" />
     <Content Include="images\fruits\60Banana.png" />
     <Content Include="images\fruits\60Lemon.png" />
     <Content Include="images\fruits\60Mint.png" />

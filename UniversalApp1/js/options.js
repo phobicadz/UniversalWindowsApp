@@ -84,7 +84,7 @@
     });
 
     // SDK Sample Test helper
-    document.TestSdkSample = {
+    document.MyFirstWUA = {
         getLastError: function () {
             return lastError;
         },
@@ -102,8 +102,8 @@
     };
 
     var scenarios = [
-        { url: "/html/enterPage.html", title: "Show page" },
-        { url: "/html/transitionPages.html", title: "Transition between pages" },
+        { url: "../html/content.html", title: "Show page" },
+        { url: "/html/Page1.html", title: "Transition between pages" },
         { url: "/html/enterContent.html", title: "Show content" },
         { url: "/html/transitionContents.html", title: "Transition between content" },
         { url: "/html/expandAndCollapse.html", title: "Expand and collapse" },
