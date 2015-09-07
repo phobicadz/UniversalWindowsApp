@@ -60,8 +60,11 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="default.html" />
+    <Content Include="html\content.html" />
+    <Content Include="html\footer.html" />
     <Content Include="html\header.html" />
     <Content Include="html\options.html" />
+    <Content Include="html\Page1.html" />
     <Content Include="images\fruits\60Banana.png" />
     <Content Include="images\fruits\60Lemon.png" />
     <Content Include="images\fruits\60Mint.png" />
@@ -78,7 +81,8 @@
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
     <Content Include="js\jquery-2.1.4.min.js" />
-    <Content Include="page.html" />
+    <Content Include="js\options.js" />
+    <Content Include="js\Page1.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />
