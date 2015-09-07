@@ -1079,7 +1079,7 @@ select[multiple].win-dropdown {
   writing-mode: bt-lr;
   width: 22px;
   height: 280px;
-}
+} vv
 .win-slider.win-vertical::-ms-track {
   width: 2px;
   height: auto;
