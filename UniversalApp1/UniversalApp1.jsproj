@@ -78,11 +78,15 @@
     <Content Include="images\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="images\StoreLogo.png" />
     <Content Include="images\Wide310x150Logo.scale-200.png" />
+    <Content Include="js\angular-winjs.js" />
+    <Content Include="js\angular.min.js" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
+    <Content Include="js\header.js" />
     <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="js\options.js" />
     <Content Include="js\Page1.js" />
+    <Content Include="js\todo.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />

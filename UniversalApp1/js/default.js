@@ -1,7 +1,7 @@
 ﻿// For an introduction to the Blank template, see the following documentation:
 // http://go.microsoft.com/fwlink/?LinkId=232509
 (function () {
-	"use strict";
+    "use strict";
 
 	var app = WinJS.Application;
 	var nav = WinJS.Navigation;
@@ -27,6 +27,7 @@
 
 			args.setPromise(WinJS.UI.processAll().done(function () {
 
+                // Add Events Listeners here
 			    splitView = document.querySelector("#root").winControl;
 			    splitView.onbeforeclose = function () { WinJS.Utilities.addClass(splitView.element, "hiding"); };
 			    splitView.onafterclose = function () { WinJS.Utilities.removeClass(splitView.element, "hiding"); };
@@ -39,9 +40,6 @@
 			        buttons[i].addEventListener("click", handleSplitViewButton);
 			    }
 
-                // Add Events Listeners here
-			  
-
 			}));
 			//args.setPromise(WinJS.UI.processAll());
 		}
@@ -53,7 +51,7 @@
 		// If you need to complete an asynchronous operation before your application is suspended, call args.setPromise().
 	};
 
-
+    // navigating event handler
     function navigating(eventObject) {
         var url = eventObject.detail.location;
         var host = document.getElementById("contentHost");
@@ -83,7 +81,6 @@
     function handleSplitViewButton() {
         splitView.paneOpened = !splitView.paneOpened;
     }
-
 
     function handleResize() {
         if (window.innerWidth > 768) {

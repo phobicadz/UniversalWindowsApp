@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="todoApp">
 <head>
     <meta charset="utf-8" />
     <title>My First Univeral App</title>
@@ -15,8 +15,42 @@
     <script src="/js/options.js"></script>
     <script src="/js/jquery-2.1.4.min.js"></script>
 
+    <!-- AngularJS references -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-winjs.js"></script>
+   
+    <script src="js/todo.js"></script>
+
 </head>
 <body role="application" class="win-type-body">
+
+    <div ng-controller="TodoListController as todoList">
+             <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+              [ <a href="" ng-click="todoList.archive()">archive</a> ]
+              <ul class="unstyled">
+            
+            <li ng-repeat="todo in todoList.todos">
+                          <input type="checkbox" ng-model="todo.done">
+                         <span class="done-{{todo.done}}">{{todo.text}}</span>
+                
+            </li>      
+        </ul>
+              <form ng-submit="todoList.addTodo()">
+                   <input type="text" ng-model="todoList.todoText" size="30"
+                               placeholder="add new todo here">
+                    <input class="btn-primary" type="submit" value="add">      
+        </form>
+    </div>
+
+    <button id="menuAnchor">Show a menu!</button>
+    <win-menu anchor="'#menuAnchor'">
+        <win-menu-command label="'command the first'"></win-menu-command>
+        <win-menu-command label="'command the second'"></win-menu-command>
+        <win-menu-command label="'this would be a great place for ng-repeater...'"></win-menu-command>
+    </win-menu>
+
+
+
     <div id="root" data-win-control="WinJS.UI.SplitView" data-win-options="{ paneHidden: MyFirstWUA.paneHiddenInitially }">
         <div>
             <button type="button" class="splitViewButton win-button"></button>

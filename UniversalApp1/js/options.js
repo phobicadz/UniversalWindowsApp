@@ -31,12 +31,7 @@
             }
         }
     };
-
-    var header = WinJS.UI.Pages.define("/html/header.html", {
-        processed: function (element, options) {
-            return WinJS.Binding.processAll(element);
-        }
-    });
+ 
 
     // Control that populates and runs the scenario selector
     var ScenarioSelect = WinJS.UI.Pages.define("/html/options.html", {
@@ -102,8 +97,8 @@
     };
 
     var scenarios = [
-        { url: "../html/content.html", title: "Test Page 1" },
-        { url: "/html/Page1.html", title: "Transition between" }
+        { url: "../html/content.html", title: "Test Page" },
+        { url: "/html/Page1.html", title: "Fruity List" }
       
     ];
 

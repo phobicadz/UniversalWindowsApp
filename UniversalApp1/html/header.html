@@ -3,13 +3,19 @@ Copyright (c) Microsoft Corporation. All rights reserved
 -->
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="header">
 <head>
     <title></title>
+    <script src="../js/header.js"></script>
 </head>
 <body>
     <img src="/images/windows-sdk.png" alt="Windows Logo" />
     <span>Windows platform sample</span><br />
     <h1 id="featureLabel" data-win-bind="textContent: SdkSample.sampleTitle"></h1>
+
+
+    <win-date-picker current="date" on-change="dateChanged()"></win-date-picker>
+
+
 </body>
 </html>

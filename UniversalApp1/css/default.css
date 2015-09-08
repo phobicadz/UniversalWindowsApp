@@ -124,3 +124,7 @@ button.splitViewButton {
     .win-scrollview { height:80%; }
     .win-listview { height:100%;}  
     .win-ui-light .win-splitview-pane { background-color: lightGray;}
+
+    .done-true { text-decoration: line-through; color: grey; }
+
+
