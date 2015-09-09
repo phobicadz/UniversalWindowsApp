@@ -1,25 +1,23 @@
-﻿<!--k
+﻿<!--
 Copyright (c) Microsoft Corporation. All rights reserved
 -->
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <title></title>
-   
+    <title></title>
+
 </head>
 <body>
-    <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{ label: 'Go Home',icon: 'home'}" class="splitViewButton"></div>
-
-     <!--WinJS.Binding.Template for #scenarioControl -->
+    <!--WinJS.Binding.Template for #scenarioControl -->
     <div id="scenarioItem" data-win-control="WinJS.Binding.Template" style="display: none;">
         <div class="scenarioItem" data-win-bind="title: title">
             <span class="scenarioNumber" data-win-bind="innerText: scenarioNumber"></span>
-         <span data-win-bind="innerText: title"></span>
+            <span data-win-bind="innerText: title"></span>
         </div>
     </div>
 
-  <div id="scenarioControl" class="win-selectionstylefilled"
+    <div id="scenarioControl" class="win-selectionstylefilled"
          data-win-control="WinJS.UI.ListView"
          data-win-options="{
           itemDataSource: MyFirstWUA.scenarios.dataSource,

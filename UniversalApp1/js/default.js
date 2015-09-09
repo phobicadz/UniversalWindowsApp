@@ -1,7 +1,41 @@
 ﻿// For an introduction to the Blank template, see the following documentation:
 // http://go.microsoft.com/fwlink/?LinkId=232509
+
+
+// declare an angular module for this page with angular winjs module included
+angular.module('defaultPage', ['winjs'])
+    .controller('splitViewController', function ($scope) {
+
+        var splitViewController = this;
+
+        splitViewController.toggle = function () {
+            $scope.splitViewControl.paneOpened = !$scope.splitViewControl.paneOpened;
+        }
+
+      //  $scope.splitViewControl.onbeforeclose = function () { WinJS.Utilities.addClass($scope.splitViewControl.element, "hiding"); };
+      //  $scope.splitViewControl.onafterclose = function () { WinJS.Utilities.removeClass($scope.splitViewControl.element, "hiding"); };
+
+        splitViewController.gotoHome = function ()
+        {
+            // Change the view here...
+        }
+
+        //function handleResize() {
+        //    if (window.innerWidth > 768) {
+        //        splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;
+        //        splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.inline;
+        //    } else {
+        //        splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;
+        //        splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.overlay;
+        //        splitView.closePane();
+        //    }
+        //}
+
+    });
+
+// WinJS Code
 (function () {
-	"use strict";
+    "use strict";
 
 	var app = WinJS.Application;
 	var nav = WinJS.Navigation;
@@ -22,28 +56,7 @@
 				// TODO: This application was suspended and then terminated.
 				// To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
 			}
-
-			MyFirstWUA.paneHiddenInitially = window.innerWidth <= 768;
-
-			args.setPromise(WinJS.UI.processAll().done(function () {
-
-			    splitView = document.querySelector("#root").winControl;
-			    splitView.onbeforeclose = function () { WinJS.Utilities.addClass(splitView.element, "hiding"); };
-			    splitView.onafterclose = function () { WinJS.Utilities.removeClass(splitView.element, "hiding"); };
-			    window.addEventListener("resize", handleResize);
-			    handleResize();
-
-               //split view buttons hide/show panel
-			    var buttons = document.querySelectorAll(".splitViewButton");
-			    for (var i = 0, len = buttons.length; i < len; i++) {
-			        buttons[i].addEventListener("click", handleSplitViewButton);
-			    }
-
-                // Add Events Listeners here
-			  
-
-			}));
-			//args.setPromise(WinJS.UI.processAll());
+			args.setPromise(WinJS.UI.processAll());
 		}
 	};
 
@@ -53,52 +66,9 @@
 		// If you need to complete an asynchronous operation before your application is suspended, call args.setPromise().
 	};
 
-
-    function navigating(eventObject) {
-        var url = eventObject.detail.location;
-        var host = document.getElementById("contentHost");
-        // Call unload and dispose methods on current scenario, if any exist
-        if (host.winControl) {
-            host.winControl.unload && host.winControl.unload();
-            host.winControl.dispose && host.winControl.dispose();
-        }
-        WinJS.Utilities.disposeSubTree(host);
-        WinJS.Utilities.empty(host);
-        WinJS.log && WinJS.log("", "", "status");
-
-        var p = WinJS.UI.Pages.render(url, host, eventObject.detail.state).
-            then(function () {
-                var navHistory = nav.history;
-                app.sessionState.navigationHistory = {
-                    backStack: navHistory.backStack.slice(0),
-                    forwardStack: navHistory.forwardStack.slice(0),
-                    current: navHistory.current
-                };
-                app.sessionState.lastUrl = url;
-            });
-        p.done();
-        eventObject.detail.setPromise(p);
-    }
-
-    function handleSplitViewButton() {
-        splitView.paneOpened = !splitView.paneOpened;
-    }
-
-
-    function handleResize() {
-        if (window.innerWidth > 768) {
-            splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;
-            splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.inline;
-        } else {
-            splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;
-            splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.overlay;
-            splitView.closePane();
-        }
-    }
-
-    nav.addEventListener("navigating", navigating);
     WinJS.UI.processAll();
 
     app.start();
 
 })();
+

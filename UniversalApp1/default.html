@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="defaultPage">
 <head>
     <meta charset="utf-8" />
     <title>My First Univeral App</title>
@@ -9,31 +9,40 @@
     <script src="WinJS/js/base.js"></script>
     <script src="WinJS/js/ui.js"></script>
 
+    <!-- AngularJS references -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-winjs.js"></script>
+
     <!-- UniversalApp1 references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/default.js"></script>
     <script src="/js/options.js"></script>
+    <script src="/js/header.js"></script>
     <script src="/js/jquery-2.1.4.min.js"></script>
 
 </head>
 <body role="application" class="win-type-body">
-    <div id="root" data-win-control="WinJS.UI.SplitView" data-win-options="{ paneHidden: MyFirstWUA.paneHiddenInitially }" class="win-splitview">
-       <div>
-            <button type="button" class="splitViewButton win-button"></button>
-      
-            <div id="header" role="contentinfo" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/header.html'}"></div>
-            <div id="scenarioPane" class="nav-commands" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/options.html'}"></div>
-            <div id="footer" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/footer.html'}"></div>
-        
-        </div>
-        <button type="button" class="splitViewButton win-button"></button>
-        <div id="contentWrapper">
-            <div id="contentHost"></div>
-            <div id="statusBox">
-                Status:
-                <div id="statusMessage"></div>
-            </div>
-        </div>
+
+    <div ng-controller="splitViewController as svc" id="app">
+        <win-split-view-pane-toggle split-view="splitView" ng-click="svc.toggle()"></win-split-view-pane-toggle>
+        <win-split-view id="splitView" win-control="splitViewControl">
+            <win-split-view-pane>
+                <div class="nav-commands">
+                    <button id="btnHome" ng-click="svc.gotoHome()">Press Me</button>
+                </div>
+            </win-split-view-pane>
+            <win-split-view-content>
+
+                <button id="menuAnchor">Show a menu!</button>
+                <win-menu anchor="'#menuAnchor'">
+                    <win-menu-command label="'command the first'"></win-menu-command>
+                    <win-menu-command label="'command the second'"></win-menu-command>
+                    <win-menu-command label="'this would be a great place for ng-repeater...'"></win-menu-command>
+                </win-menu>
+
+            </win-split-view-content>
+        </win-split-view>
     </div>
+
 </body>
 </html>

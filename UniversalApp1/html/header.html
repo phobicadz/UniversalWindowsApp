@@ -3,13 +3,23 @@ Copyright (c) Microsoft Corporation. All rights reserved
 -->
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="header">
 <head>
     <title></title>
+
 </head>
 <body>
-    <img src="/images/windows-sdk.png" alt="Windows Logo" />
-    <span>Windows platform sample</span><br />
-    <h1 id="featureLabel" data-win-bind="textContent: SdkSample.sampleTitle"></h1>
+   
+        <button id="menuAnchored">Show a menu!</button>
+        <win-menu anchor="'#menuAnchored'">
+            <win-menu-command label="'command the first'"></win-menu-command>
+            <win-menu-command label="'command the second'"></win-menu-command>
+            <win-menu-command label="'this would be a great place for ng-repeater...'"></win-menu-command>
+        </win-menu>
+
+        <!--<img src="/images/windows-sdk.png" alt="Windows Logo" />
+        <span>Windows platform sample</span><br />
+        <h1 id="featureLabel" data-win-bind="textContent: SdkSample.sampleTitle"></h1>-->
+    
 </body>
 </html>
