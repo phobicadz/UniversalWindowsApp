@@ -17,15 +17,15 @@
 
 </head>
 <body role="application" class="win-type-body">
-    <div id="root" data-win-control="WinJS.UI.SplitView" data-win-options="{ paneHidden: MyFirstWUA.paneHiddenInitially }">
-        <div>
+    <div id="root" data-win-control="WinJS.UI.SplitView" data-win-options="{ paneHidden: MyFirstWUA.paneHiddenInitially }" class="win-splitview">
+       <div>
             <button type="button" class="splitViewButton win-button"></button>
+      
             <div id="header" role="contentinfo" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/header.html'}"></div>
-            <div id="scenarioPane" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/options.html'}"></div>
+            <div id="scenarioPane" class="nav-commands" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/options.html'}"></div>
             <div id="footer" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/footer.html'}"></div>
+        
         </div>
-
-
         <button type="button" class="splitViewButton win-button"></button>
         <div id="contentWrapper">
             <div id="contentHost"></div>
