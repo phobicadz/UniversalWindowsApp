@@ -4,6 +4,9 @@
     this.itemSelected = function ($event) {
         
     }
+
+    // declare selection array
+    $scope.selection = [];
    
     // move this to web api as a test
     var itemArray = [
@@ -26,6 +29,7 @@
         });
     }
 
+    // need to create list as a special binding list
     $scope.listdata = new WinJS.Binding.List(items);
 });
 
