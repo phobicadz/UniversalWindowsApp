@@ -3,7 +3,7 @@
 
 
 // declare an angular module for this page with angular winjs module included
-var angularApp = angular.module('main', ['winjs','ngRoute'])
+var angularApp = angular.module('main', ['winjs','ngRoute','ngGrid'])
 
 
 angularApp
@@ -13,6 +13,7 @@ angularApp
             .when('/', { templateUrl: '/', controller: 'splitViewController' })
             .when('/fruit', { templateUrl: 'html/Page1.html', controller: 'listViewController' })
             .when('/options', { templateUrl: 'html/options.html', controller: 'optionsController' })
+            .when('/grid',{templateUrl:'html/grid.html',controller:'gridController'})
             .otherwise({ redirectTo: '/' });
     }])
     .controller('RootController', ['$scope', '$route', '$routeParams', '$location', function ($scope, $route, $routeParams, $location) {

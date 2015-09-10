@@ -12,7 +12,7 @@
             // amd
             define([], factory);
         } else {
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.0 4.0.0.winjs.2015.6.9 base.js,StartTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.2 4.2.0.winjs.2015.8.17 base.js,StartTM');
             if (typeof module !== 'undefined') {
                 // CommonJS
                 factory();
@@ -20,7 +20,7 @@
                 // No module system
                 factory(globalObject.WinJS);
             }
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.0 4.0.0.winjs.2015.6.9 base.js,StopTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.2 4.2.0.winjs.2015.8.17 base.js,StopTM');
         }
     }(function (WinJS) {
 
@@ -792,7 +792,7 @@ define('require-json',{load: function(id){throw new Error("Dynamic load not allo
 define('require-json!strings/en-us/Microsoft.WinJS.resjson',{
     "ui/appBarAriaLabel": "App Bar",
     "ui/appBarCommandAriaLabel": "App Bar Item",
-	"ui/appBarOverflowButtonAriaLabel": "View more",
+    "ui/appBarOverflowButtonAriaLabel": "View more",
     "ui/autoSuggestBoxAriaLabel": "Autosuggestbox",
     "ui/autoSuggestBoxAriaLabelInputNoPlaceHolder": "Autosuggestbox, enter to submit query, esc to clear text",
     "ui/autoSuggestBoxAriaLabelInputPlaceHolder": "Autosuggestbox, {0}, enter to submit query, esc to clear text",
@@ -806,10 +806,10 @@ define('require-json!strings/en-us/Microsoft.WinJS.resjson',{
     "ui/backbuttonarialabel": "Back",
     "ui/chapterSkipBackMediaCommandDisplayText": "Chapter back",
     "ui/chapterSkipForwardMediaCommandDisplayText": "Chapter forward",
-    "ui/clearYourRating" : "Clear your rating",
+    "ui/clearYourRating": "Clear your rating",
     "ui/closedCaptionsLabelNone": "Off",
     "ui/closedCaptionsMediaCommandDisplayText": "Closed captioning",
-    "ui/closeOverlay" : "Close",
+    "ui/closeOverlay": "Close",
     "ui/commandingSurfaceAriaLabel": "CommandingSurface",
     "ui/commandingSurfaceOverflowButtonAriaLabel": "View more",
     "ui/datePicker": "Date Picker",
@@ -853,8 +853,8 @@ define('require-json!strings/en-us/Microsoft.WinJS.resjson',{
     "ui/menuAriaLabel": "Menu",
     "ui/navBarContainerViewportAriaLabel": "Scrolling Container",
     "ui/nextTrackMediaCommandDisplayText": "Next track",
-    "ui/off" : "Off",
-    "ui/on" : "On",
+    "ui/off": "Off",
+    "ui/on": "On",
     "ui/pauseMediaCommandDisplayText": "Pause",
     "ui/playFromBeginningMediaCommandDisplayText": "Play again",
     "ui/playbackRateHalfSpeedLabel": "0.5x",
@@ -894,400 +894,400 @@ define('require-json!strings/en-us/Microsoft.WinJS.resjson',{
     // AppBar Icons follow, the format of the ui.js and ui.resjson differ for
     // the AppBarIcon namespace.  The remainder of the file therefore differs.
     // Code point comments are the icon glyphs in the 'Segoe UI Symbol' font.
-    "ui/appBarIcons/previous":                            "\uE100", //  group:Media
-    "_ui/appBarIcons/previous.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/next":                                "\uE101", //  group:Media
-    "_ui/appBarIcons/next.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/play":                                "\uE102", //  group:Media
-    "_ui/appBarIcons/play.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/pause":                               "\uE103", //  group:Media
-    "_ui/appBarIcons/pause.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/edit":                                "\uE104", //  group:File
-    "_ui/appBarIcons/edit.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/save":                                "\uE105", //  group:File
-    "_ui/appBarIcons/save.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/clear":                               "\uE106", //  group:File
-    "_ui/appBarIcons/clear.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/delete":                              "\uE107", //  group:File
-    "_ui/appBarIcons/delete.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/remove":                              "\uE108", //  group:File
-    "_ui/appBarIcons/remove.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/add":                                 "\uE109", //  group:File
-    "_ui/appBarIcons/add.comment":                        "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/cancel":                              "\uE10A", //  group:Editing
-    "_ui/appBarIcons/cancel.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/accept":                              "\uE10B", //  group:General
-    "_ui/appBarIcons/accept.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/more":                                "\uE10C", //  group:General
-    "_ui/appBarIcons/more.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/redo":                                "\uE10D", //  group:Editing
-    "_ui/appBarIcons/redo.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/undo":                                "\uE10E", //  group:Editing
-    "_ui/appBarIcons/undo.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/home":                                "\uE10F", //  group:General
-    "_ui/appBarIcons/home.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/up":                                  "\uE110", //  group:General
-    "_ui/appBarIcons/up.comment":                         "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/forward":                             "\uE111", //  group:General
-    "_ui/appBarIcons/forward.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/right":                               "\uE111", //  group:General
-    "_ui/appBarIcons/right.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/back":                                "\uE112", //  group:General
-    "_ui/appBarIcons/back.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/left":                                "\uE112", //  group:General
-    "_ui/appBarIcons/left.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/favorite":                            "\uE113", //  group:Media
-    "_ui/appBarIcons/favorite.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/camera":                              "\uE114", //  group:System
-    "_ui/appBarIcons/camera.comment":                     "{Locked:qps-ploc,qps-plocm}",    
-    "ui/appBarIcons/settings":                            "\uE115", //  group:System
-    "_ui/appBarIcons/settings.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/video":                               "\uE116", //  group:Media
-    "_ui/appBarIcons/video.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/sync":                                "\uE117", //  group:Media
-    "_ui/appBarIcons/sync.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/download":                            "\uE118", //  group:Media
-    "_ui/appBarIcons/download.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/mail":                                "\uE119", //  group:Mail and calendar
-    "_ui/appBarIcons/mail.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/find":                                "\uE11A", //  group:Data
-    "_ui/appBarIcons/find.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/help":                                "\uE11B", //  group:General
-    "_ui/appBarIcons/help.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/upload":                              "\uE11C", //  group:Media
-    "_ui/appBarIcons/upload.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/emoji":                               "\uE11D", //  group:Communications
-    "_ui/appBarIcons/emoji.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/twopage":                             "\uE11E", //  group:Layout
-    "_ui/appBarIcons/twopage.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/leavechat":                           "\uE11F", //  group:Communications
-    "_ui/appBarIcons/leavechat.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/mailforward":                         "\uE120", //  group:Mail and calendar
-    "_ui/appBarIcons/mailforward.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/clock":                               "\uE121", //  group:General
-    "_ui/appBarIcons/clock.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/send":                                "\uE122", //  group:Mail and calendar
-    "_ui/appBarIcons/send.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/crop":                                "\uE123", //  group:Editing
-    "_ui/appBarIcons/crop.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/rotatecamera":                        "\uE124", //  group:System
-    "_ui/appBarIcons/rotatecamera.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/people":                              "\uE125", //  group:Communications
-    "_ui/appBarIcons/people.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/closepane":                           "\uE126", //  group:Layout
-    "_ui/appBarIcons/closepane.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/openpane":                            "\uE127", //  group:Layout
-    "_ui/appBarIcons/openpane.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/world":                               "\uE128", //  group:General
-    "_ui/appBarIcons/world.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/flag":                                "\uE129", //  group:Mail and calendar
-    "_ui/appBarIcons/flag.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/previewlink":                         "\uE12A", //  group:General
-    "_ui/appBarIcons/previewlink.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/globe":                               "\uE12B", //  group:Communications
-    "_ui/appBarIcons/globe.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/trim":                                "\uE12C", //  group:Editing
-    "_ui/appBarIcons/trim.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/attachcamera":                        "\uE12D", //  group:System
-    "_ui/appBarIcons/attachcamera.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/zoomin":                              "\uE12E", //  group:Layout
-    "_ui/appBarIcons/zoomin.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/bookmarks":                           "\uE12F", //  group:Editing
-    "_ui/appBarIcons/bookmarks.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/document":                            "\uE130", //  group:File
-    "_ui/appBarIcons/document.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/protecteddocument":                   "\uE131", //  group:File
-    "_ui/appBarIcons/protecteddocument.comment":          "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/page":                                "\uE132", //  group:Layout
-    "_ui/appBarIcons/page.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/bullets":                             "\uE133", //  group:Editing
-    "_ui/appBarIcons/bullets.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/comment":                             "\uE134", //  group:Communications
-    "_ui/appBarIcons/comment.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/mail2":                               "\uE135", //  group:Mail and calendar
-    "_ui/appBarIcons/mail2.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/contactinfo":                         "\uE136", //  group:Communications
-    "_ui/appBarIcons/contactinfo.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/hangup":                              "\uE137", //  group:Communications
-    "_ui/appBarIcons/hangup.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/viewall":                             "\uE138", //  group:Data
-    "_ui/appBarIcons/viewall.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/mappin":                              "\uE139", //  group:General
-    "_ui/appBarIcons/mappin.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/phone":                               "\uE13A", //  group:Communications
-    "_ui/appBarIcons/phone.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/videochat":                           "\uE13B", //  group:Communications
-    "_ui/appBarIcons/videochat.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/switch":                              "\uE13C", //  group:Communications
-    "_ui/appBarIcons/switch.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/contact":                             "\uE13D", //  group:Communications
-    "_ui/appBarIcons/contact.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/rename":                              "\uE13E", //  group:File
-    "_ui/appBarIcons/rename.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/pin":                                 "\uE141", //  group:System
-    "_ui/appBarIcons/pin.comment":                        "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/musicinfo":                           "\uE142", //  group:Media
-    "_ui/appBarIcons/musicinfo.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/go":                                  "\uE143", //  group:General
-    "_ui/appBarIcons/go.comment":                         "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/keyboard":                            "\uE144", //  group:System
-    "_ui/appBarIcons/keyboard.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/dockleft":                            "\uE145", //  group:Layout
-    "_ui/appBarIcons/dockleft.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/dockright":                           "\uE146", //  group:Layout
-    "_ui/appBarIcons/dockright.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/dockbottom":                          "\uE147", //  group:Layout
-    "_ui/appBarIcons/dockbottom.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/remote":                              "\uE148", //  group:System
-    "_ui/appBarIcons/remote.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/refresh":                             "\uE149", //  group:Data
-    "_ui/appBarIcons/refresh.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/rotate":                              "\uE14A", //  group:Layout
-    "_ui/appBarIcons/rotate.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/shuffle":                             "\uE14B", //  group:Media
-    "_ui/appBarIcons/shuffle.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/list":                                "\uE14C", //  group:Editing
-    "_ui/appBarIcons/list.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/shop":                                "\uE14D", //  group:General
-    "_ui/appBarIcons/shop.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/selectall":                           "\uE14E", //  group:Data
-    "_ui/appBarIcons/selectall.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/orientation":                         "\uE14F", //  group:Layout
-    "_ui/appBarIcons/orientation.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/import":                              "\uE150", //  group:Data
-    "_ui/appBarIcons/import.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/importall":                           "\uE151", //  group:Data
-    "_ui/appBarIcons/importall.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/browsephotos":                        "\uE155", //  group:Media
-    "_ui/appBarIcons/browsephotos.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/webcam":                              "\uE156", //  group:System
-    "_ui/appBarIcons/webcam.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/pictures":                            "\uE158", //  group:Media
-    "_ui/appBarIcons/pictures.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/savelocal":                           "\uE159", //  group:File
-    "_ui/appBarIcons/savelocal.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/caption":                             "\uE15A", //  group:Media
-    "_ui/appBarIcons/caption.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/stop":                                "\uE15B", //  group:Media
-    "_ui/appBarIcons/stop.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/showresults":                         "\uE15C", //  group:Data
-    "_ui/appBarIcons/showresults.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/volume":                              "\uE15D", //  group:Media
-    "_ui/appBarIcons/volume.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/repair":                              "\uE15E", //  group:System
-    "_ui/appBarIcons/repair.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/message":                             "\uE15F", //  group:Communications
-    "_ui/appBarIcons/message.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/page2":                               "\uE160", //  group:Layout
-    "_ui/appBarIcons/page2.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/calendarday":                         "\uE161", //  group:Mail and calendar
-    "_ui/appBarIcons/calendarday.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/calendarweek":                        "\uE162", //  group:Mail and calendar
-    "_ui/appBarIcons/calendarweek.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/calendar":                            "\uE163", //  group:Mail and calendar
-    "_ui/appBarIcons/calendar.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/characters":                          "\uE164", //  group:Editing
-    "_ui/appBarIcons/characters.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/mailreplyall":                        "\uE165", //  group:Mail and calendar
-    "_ui/appBarIcons/mailreplyall.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/read":                                "\uE166", //  group:Mail and calendar
-    "_ui/appBarIcons/read.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/link":                                "\uE167", //  group:Communications
-    "_ui/appBarIcons/link.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/accounts":                            "\uE168", //  group:Communications
-    "_ui/appBarIcons/accounts.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/showbcc":                             "\uE169", //  group:Mail and calendar
-    "_ui/appBarIcons/showbcc.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/hidebcc":                             "\uE16A", //  group:Mail and calendar
-    "_ui/appBarIcons/hidebcc.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/cut":                                 "\uE16B", //  group:Editing
-    "_ui/appBarIcons/cut.comment":                        "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/attach":                              "\uE16C", //  group:Mail and calendar
-    "_ui/appBarIcons/attach.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/paste":                               "\uE16D", //  group:Editing
-    "_ui/appBarIcons/paste.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/filter":                              "\uE16E", //  group:Data
-    "_ui/appBarIcons/filter.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/copy":                                "\uE16F", //  group:Editing
-    "_ui/appBarIcons/copy.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/emoji2":                              "\uE170", //  group:Mail and calendar
-    "_ui/appBarIcons/emoji2.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/important":                           "\uE171", //  group:Mail and calendar
-    "_ui/appBarIcons/important.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/mailreply":                           "\uE172", //  group:Mail and calendar
-    "_ui/appBarIcons/mailreply.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/slideshow":                           "\uE173", //  group:Media
-    "_ui/appBarIcons/slideshow.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/sort":                                "\uE174", //  group:Data
-    "_ui/appBarIcons/sort.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/manage":                              "\uE178", //  group:System
-    "_ui/appBarIcons/manage.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/allapps":                             "\uE179", //  group:System
-    "_ui/appBarIcons/allapps.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/disconnectdrive":                     "\uE17A", //  group:System
-    "_ui/appBarIcons/disconnectdrive.comment":            "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/mapdrive":                            "\uE17B", //  group:System
-    "_ui/appBarIcons/mapdrive.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/newwindow":                           "\uE17C", //  group:System
-    "_ui/appBarIcons/newwindow.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/openwith":                            "\uE17D", //  group:System
-    "_ui/appBarIcons/openwith.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/contactpresence":                     "\uE181", //  group:Communications
-    "_ui/appBarIcons/contactpresence.comment":            "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/priority":                            "\uE182", //  group:Mail and calendar
-    "_ui/appBarIcons/priority.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/uploadskydrive":                      "\uE183", //  group:File
-    "_ui/appBarIcons/uploadskydrive.comment":             "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/gototoday":                           "\uE184", //  group:Mail and calendar
-    "_ui/appBarIcons/gototoday.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/font":                                "\uE185", //  group:Editing
-    "_ui/appBarIcons/font.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/fontcolor":                           "\uE186", //  group:Editing
-    "_ui/appBarIcons/fontcolor.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/contact2":                            "\uE187", //  group:Communications
-    "_ui/appBarIcons/contact2.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/folder":                              "\uE188", //  group:File
-    "_ui/appBarIcons/folder.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/audio":                               "\uE189", //  group:Media
-    "_ui/appBarIcons/audio.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/placeholder":                         "\uE18A", //  group:General
-    "_ui/appBarIcons/placeholder.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/view":                                "\uE18B", //  group:Layout
-    "_ui/appBarIcons/view.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/setlockscreen":                       "\uE18C", //  group:System
-    "_ui/appBarIcons/setlockscreen.comment":              "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/settile":                             "\uE18D", //  group:System
-    "_ui/appBarIcons/settile.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/cc":                                  "\uE190", //  group:Media
-    "_ui/appBarIcons/cc.comment":                         "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/stopslideshow":                       "\uE191", //  group:Media
-    "_ui/appBarIcons/stopslideshow.comment":              "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/permissions":                         "\uE192", //  group:System
-    "_ui/appBarIcons/permissions.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/highlight":                           "\uE193", //  group:Editing
-    "_ui/appBarIcons/highlight.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/disableupdates":                      "\uE194", //  group:System
-    "_ui/appBarIcons/disableupdates.comment":             "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/unfavorite":                          "\uE195", //  group:Media
-    "_ui/appBarIcons/unfavorite.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/unpin":                               "\uE196", //  group:System
-    "_ui/appBarIcons/unpin.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/openlocal":                           "\uE197", //  group:File
-    "_ui/appBarIcons/openlocal.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/mute":                                "\uE198", //  group:Media
-    "_ui/appBarIcons/mute.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/italic":                              "\uE199", //  group:Editing
-    "_ui/appBarIcons/italic.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/underline":                           "\uE19A", //  group:Editing
-    "_ui/appBarIcons/underline.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/bold":                                "\uE19B", //  group:Editing
-    "_ui/appBarIcons/bold.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/movetofolder":                        "\uE19C", //  group:File
-    "_ui/appBarIcons/movetofolder.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/likedislike":                         "\uE19D", //  group:Data
-    "_ui/appBarIcons/likedislike.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/dislike":                             "\uE19E", //  group:Data
-    "_ui/appBarIcons/dislike.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/like":                                "\uE19F", //  group:Data
-    "_ui/appBarIcons/like.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/alignright":                          "\uE1A0", //  group:Editing
-    "_ui/appBarIcons/alignright.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/aligncenter":                         "\uE1A1", //  group:Editing
-    "_ui/appBarIcons/aligncenter.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/alignleft":                           "\uE1A2", //  group:Editing
-    "_ui/appBarIcons/alignleft.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/zoom":                                "\uE1A3", //  group:Layout
-    "_ui/appBarIcons/zoom.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/zoomout":                             "\uE1A4", //  group:Layout
-    "_ui/appBarIcons/zoomout.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/openfile":                            "\uE1A5", //  group:File
-    "_ui/appBarIcons/openfile.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/otheruser":                           "\uE1A6", //  group:System
-    "_ui/appBarIcons/otheruser.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/admin":                               "\uE1A7", //  group:System
-    "_ui/appBarIcons/admin.comment":                      "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/street":                              "\uE1C3", //  group:General
-    "_ui/appBarIcons/street.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/map":                                 "\uE1C4", //  group:General
-    "_ui/appBarIcons/map.comment":                        "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/clearselection":                      "\uE1C5", //  group:Data
-    "_ui/appBarIcons/clearselection.comment":             "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/fontdecrease":                        "\uE1C6", //  group:Editing
-    "_ui/appBarIcons/fontdecrease.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/fontincrease":                        "\uE1C7", //  group:Editing
-    "_ui/appBarIcons/fontincrease.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/fontsize":                            "\uE1C8", //  group:Editing
-    "_ui/appBarIcons/fontsize.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/cellphone":                           "\uE1C9", //  group:Communications
-    "_ui/appBarIcons/cellphone.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/reshare":                             "\uE1CA", //  group:Communications
-    "_ui/appBarIcons/reshare.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/tag":                                 "\uE1CB", //  group:Data
-    "_ui/appBarIcons/tag.comment":                        "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/repeatone":                           "\uE1CC", //  group:Media
-    "_ui/appBarIcons/repeatone.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/repeatall":                           "\uE1CD", //  group:Media
-    "_ui/appBarIcons/repeatall.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/outlinestar":                         "\uE1CE", //  group:Data
-    "_ui/appBarIcons/outlinestar.comment":                "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/solidstar":                           "\uE1CF", //  group:Data
-    "_ui/appBarIcons/solidstar.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/calculator":                          "\uE1D0", //  group:General
-    "_ui/appBarIcons/calculator.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/directions":                          "\uE1D1", //  group:General
-    "_ui/appBarIcons/directions.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/target":                              "\uE1D2", //  group:General
-    "_ui/appBarIcons/target.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/library":                             "\uE1D3", //  group:Media
-    "_ui/appBarIcons/library.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/phonebook":                           "\uE1D4", //  group:Communications
-    "_ui/appBarIcons/phonebook.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/memo":                                "\uE1D5", //  group:Communications
-    "_ui/appBarIcons/memo.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/microphone":                          "\uE1D6", //  group:System
-    "_ui/appBarIcons/microphone.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/postupdate":                          "\uE1D7", //  group:Communications
-    "_ui/appBarIcons/postupdate.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/backtowindow":                        "\uE1D8", //  group:Layout
-    "_ui/appBarIcons/backtowindow.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/fullscreen":                          "\uE1D9", //  group:Layout
-    "_ui/appBarIcons/fullscreen.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/newfolder":                           "\uE1DA", //  group:File
-    "_ui/appBarIcons/newfolder.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/calendarreply":                       "\uE1DB", //  group:Mail and calendar
-    "_ui/appBarIcons/calendarreply.comment":              "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/unsyncfolder":                        "\uE1DD", //  group:File
-    "_ui/appBarIcons/unsyncfolder.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/reporthacked":                        "\uE1DE", //  group:Communications
-    "_ui/appBarIcons/reporthacked.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/syncfolder":                          "\uE1DF", //  group:File
-    "_ui/appBarIcons/syncfolder.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/blockcontact":                        "\uE1E0", //  group:Communications
-    "_ui/appBarIcons/blockcontact.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/switchapps":                          "\uE1E1", //  group:System
-    "_ui/appBarIcons/switchapps.comment":                 "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/addfriend":                           "\uE1E2", //  group:Communications
-    "_ui/appBarIcons/addfriend.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/touchpointer":                        "\uE1E3", //  group:System
-    "_ui/appBarIcons/touchpointer.comment":               "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/gotostart":                           "\uE1E4", //  group:System
-    "_ui/appBarIcons/gotostart.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/zerobars":                            "\uE1E5", //  group:System
-    "_ui/appBarIcons/zerobars.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/onebar":                              "\uE1E6", //  group:System
-    "_ui/appBarIcons/onebar.comment":                     "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/twobars":                             "\uE1E7", //  group:System
-    "_ui/appBarIcons/twobars.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/threebars":                           "\uE1E8", //  group:System
-    "_ui/appBarIcons/threebars.comment":                  "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/fourbars":                            "\uE1E9", //  group:System
-    "_ui/appBarIcons/fourbars.comment":                   "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/scan":                                "\uE294", //  group:General
-    "_ui/appBarIcons/scan.comment":                       "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/preview":                             "\uE295", //  group:General
-    "_ui/appBarIcons/preview.comment":                    "{Locked:qps-ploc,qps-plocm}",
-    "ui/appBarIcons/hamburger":                           "\uE700", //  group:General
-    "_ui/appBarIcons/hamburger.comment":                  "{Locked:qps-ploc,qps-plocm}"
+    "ui/appBarIcons/previous":                            "\uE100", // group:Media
+    "_ui/appBarIcons/previous.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/next":                                "\uE101", // group:Media
+    "_ui/appBarIcons/next.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/play":                                "\uE102", // group:Media
+    "_ui/appBarIcons/play.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/pause":                               "\uE103", // group:Media
+    "_ui/appBarIcons/pause.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/edit":                                "\uE104", // group:File
+    "_ui/appBarIcons/edit.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/save":                                "\uE105", // group:File
+    "_ui/appBarIcons/save.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/clear":                               "\uE106", // group:File
+    "_ui/appBarIcons/clear.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/delete":                              "\uE107", // group:File
+    "_ui/appBarIcons/delete.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/remove":                              "\uE108", // group:File
+    "_ui/appBarIcons/remove.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/add":                                 "\uE109", // group:File
+    "_ui/appBarIcons/add.comment":                        "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/cancel":                              "\uE10A", // group:Editing
+    "_ui/appBarIcons/cancel.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/accept":                              "\uE10B", // group:General
+    "_ui/appBarIcons/accept.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/more":                                "\uE10C", // group:General
+    "_ui/appBarIcons/more.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/redo":                                "\uE10D", // group:Editing
+    "_ui/appBarIcons/redo.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/undo":                                "\uE10E", // group:Editing
+    "_ui/appBarIcons/undo.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/home":                                "\uE10F", // group:General
+    "_ui/appBarIcons/home.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/up":                                  "\uE110", // group:General
+    "_ui/appBarIcons/up.comment":                         "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/forward":                             "\uE111", // group:General
+    "_ui/appBarIcons/forward.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/right":                               "\uE111", // group:General
+    "_ui/appBarIcons/right.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/back":                                "\uE112", // group:General
+    "_ui/appBarIcons/back.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/left":                                "\uE112", // group:General
+    "_ui/appBarIcons/left.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/favorite":                            "\uE113", // group:Media
+    "_ui/appBarIcons/favorite.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/camera":                              "\uE114", // group:System
+    "_ui/appBarIcons/camera.comment":                     "{Locked=qps-ploc,qps-plocm}",    
+    "ui/appBarIcons/settings":                            "\uE115", // group:System
+    "_ui/appBarIcons/settings.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/video":                               "\uE116", // group:Media
+    "_ui/appBarIcons/video.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/sync":                                "\uE117", // group:Media
+    "_ui/appBarIcons/sync.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/download":                            "\uE118", // group:Media
+    "_ui/appBarIcons/download.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/mail":                                "\uE119", // group:Mail and calendar
+    "_ui/appBarIcons/mail.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/find":                                "\uE11A", // group:Data
+    "_ui/appBarIcons/find.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/help":                                "\uE11B", // group:General
+    "_ui/appBarIcons/help.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/upload":                              "\uE11C", // group:Media
+    "_ui/appBarIcons/upload.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/emoji":                               "\uE11D", // group:Communications
+    "_ui/appBarIcons/emoji.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/twopage":                             "\uE11E", // group:Layout
+    "_ui/appBarIcons/twopage.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/leavechat":                           "\uE11F", // group:Communications
+    "_ui/appBarIcons/leavechat.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/mailforward":                         "\uE120", // group:Mail and calendar
+    "_ui/appBarIcons/mailforward.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/clock":                               "\uE121", // group:General
+    "_ui/appBarIcons/clock.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/send":                                "\uE122", // group:Mail and calendar
+    "_ui/appBarIcons/send.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/crop":                                "\uE123", // group:Editing
+    "_ui/appBarIcons/crop.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/rotatecamera":                        "\uE124", // group:System
+    "_ui/appBarIcons/rotatecamera.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/people":                              "\uE125", // group:Communications
+    "_ui/appBarIcons/people.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/closepane":                           "\uE126", // group:Layout
+    "_ui/appBarIcons/closepane.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/openpane":                            "\uE127", // group:Layout
+    "_ui/appBarIcons/openpane.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/world":                               "\uE128", // group:General
+    "_ui/appBarIcons/world.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/flag":                                "\uE129", // group:Mail and calendar
+    "_ui/appBarIcons/flag.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/previewlink":                         "\uE12A", // group:General
+    "_ui/appBarIcons/previewlink.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/globe":                               "\uE12B", // group:Communications
+    "_ui/appBarIcons/globe.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/trim":                                "\uE12C", // group:Editing
+    "_ui/appBarIcons/trim.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/attachcamera":                        "\uE12D", // group:System
+    "_ui/appBarIcons/attachcamera.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/zoomin":                              "\uE12E", // group:Layout
+    "_ui/appBarIcons/zoomin.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/bookmarks":                           "\uE12F", // group:Editing
+    "_ui/appBarIcons/bookmarks.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/document":                            "\uE130", // group:File
+    "_ui/appBarIcons/document.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/protecteddocument":                   "\uE131", // group:File
+    "_ui/appBarIcons/protecteddocument.comment":          "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/page":                                "\uE132", // group:Layout
+    "_ui/appBarIcons/page.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/bullets":                             "\uE133", // group:Editing
+    "_ui/appBarIcons/bullets.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/comment":                             "\uE134", // group:Communications
+    "_ui/appBarIcons/comment.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/mail2":                               "\uE135", // group:Mail and calendar
+    "_ui/appBarIcons/mail2.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/contactinfo":                         "\uE136", // group:Communications
+    "_ui/appBarIcons/contactinfo.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/hangup":                              "\uE137", // group:Communications
+    "_ui/appBarIcons/hangup.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/viewall":                             "\uE138", // group:Data
+    "_ui/appBarIcons/viewall.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/mappin":                              "\uE139", // group:General
+    "_ui/appBarIcons/mappin.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/phone":                               "\uE13A", // group:Communications
+    "_ui/appBarIcons/phone.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/videochat":                           "\uE13B", // group:Communications
+    "_ui/appBarIcons/videochat.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/switch":                              "\uE13C", // group:Communications
+    "_ui/appBarIcons/switch.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/contact":                             "\uE13D", // group:Communications
+    "_ui/appBarIcons/contact.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/rename":                              "\uE13E", // group:File
+    "_ui/appBarIcons/rename.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/pin":                                 "\uE141", // group:System
+    "_ui/appBarIcons/pin.comment":                        "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/musicinfo":                           "\uE142", // group:Media
+    "_ui/appBarIcons/musicinfo.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/go":                                  "\uE143", // group:General
+    "_ui/appBarIcons/go.comment":                         "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/keyboard":                            "\uE144", // group:System
+    "_ui/appBarIcons/keyboard.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/dockleft":                            "\uE145", // group:Layout
+    "_ui/appBarIcons/dockleft.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/dockright":                           "\uE146", // group:Layout
+    "_ui/appBarIcons/dockright.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/dockbottom":                          "\uE147", // group:Layout
+    "_ui/appBarIcons/dockbottom.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/remote":                              "\uE148", // group:System
+    "_ui/appBarIcons/remote.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/refresh":                             "\uE149", // group:Data
+    "_ui/appBarIcons/refresh.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/rotate":                              "\uE14A", // group:Layout
+    "_ui/appBarIcons/rotate.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/shuffle":                             "\uE14B", // group:Media
+    "_ui/appBarIcons/shuffle.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/list":                                "\uE14C", // group:Editing
+    "_ui/appBarIcons/list.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/shop":                                "\uE14D", // group:General
+    "_ui/appBarIcons/shop.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/selectall":                           "\uE14E", // group:Data
+    "_ui/appBarIcons/selectall.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/orientation":                         "\uE14F", // group:Layout
+    "_ui/appBarIcons/orientation.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/import":                              "\uE150", // group:Data
+    "_ui/appBarIcons/import.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/importall":                           "\uE151", // group:Data
+    "_ui/appBarIcons/importall.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/browsephotos":                        "\uE155", // group:Media
+    "_ui/appBarIcons/browsephotos.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/webcam":                              "\uE156", // group:System
+    "_ui/appBarIcons/webcam.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/pictures":                            "\uE158", // group:Media
+    "_ui/appBarIcons/pictures.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/savelocal":                           "\uE159", // group:File
+    "_ui/appBarIcons/savelocal.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/caption":                             "\uE15A", // group:Media
+    "_ui/appBarIcons/caption.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/stop":                                "\uE15B", // group:Media
+    "_ui/appBarIcons/stop.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/showresults":                         "\uE15C", // group:Data
+    "_ui/appBarIcons/showresults.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/volume":                              "\uE15D", // group:Media
+    "_ui/appBarIcons/volume.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/repair":                              "\uE15E", // group:System
+    "_ui/appBarIcons/repair.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/message":                             "\uE15F", // group:Communications
+    "_ui/appBarIcons/message.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/page2":                               "\uE160", // group:Layout
+    "_ui/appBarIcons/page2.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/calendarday":                         "\uE161", // group:Mail and calendar
+    "_ui/appBarIcons/calendarday.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/calendarweek":                        "\uE162", // group:Mail and calendar
+    "_ui/appBarIcons/calendarweek.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/calendar":                            "\uE163", // group:Mail and calendar
+    "_ui/appBarIcons/calendar.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/characters":                          "\uE164", // group:Editing
+    "_ui/appBarIcons/characters.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/mailreplyall":                        "\uE165", // group:Mail and calendar
+    "_ui/appBarIcons/mailreplyall.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/read":                                "\uE166", // group:Mail and calendar
+    "_ui/appBarIcons/read.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/link":                                "\uE167", // group:Communications
+    "_ui/appBarIcons/link.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/accounts":                            "\uE168", // group:Communications
+    "_ui/appBarIcons/accounts.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/showbcc":                             "\uE169", // group:Mail and calendar
+    "_ui/appBarIcons/showbcc.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/hidebcc":                             "\uE16A", // group:Mail and calendar
+    "_ui/appBarIcons/hidebcc.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/cut":                                 "\uE16B", // group:Editing
+    "_ui/appBarIcons/cut.comment":                        "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/attach":                              "\uE16C", // group:Mail and calendar
+    "_ui/appBarIcons/attach.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/paste":                               "\uE16D", // group:Editing
+    "_ui/appBarIcons/paste.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/filter":                              "\uE16E", // group:Data
+    "_ui/appBarIcons/filter.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/copy":                                "\uE16F", // group:Editing
+    "_ui/appBarIcons/copy.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/emoji2":                              "\uE170", // group:Mail and calendar
+    "_ui/appBarIcons/emoji2.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/important":                           "\uE171", // group:Mail and calendar
+    "_ui/appBarIcons/important.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/mailreply":                           "\uE172", // group:Mail and calendar
+    "_ui/appBarIcons/mailreply.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/slideshow":                           "\uE173", // group:Media
+    "_ui/appBarIcons/slideshow.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/sort":                                "\uE174", // group:Data
+    "_ui/appBarIcons/sort.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/manage":                              "\uE178", // group:System
+    "_ui/appBarIcons/manage.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/allapps":                             "\uE179", // group:System
+    "_ui/appBarIcons/allapps.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/disconnectdrive":                     "\uE17A", // group:System
+    "_ui/appBarIcons/disconnectdrive.comment":            "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/mapdrive":                            "\uE17B", // group:System
+    "_ui/appBarIcons/mapdrive.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/newwindow":                           "\uE17C", // group:System
+    "_ui/appBarIcons/newwindow.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/openwith":                            "\uE17D", // group:System
+    "_ui/appBarIcons/openwith.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/contactpresence":                     "\uE181", // group:Communications
+    "_ui/appBarIcons/contactpresence.comment":            "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/priority":                            "\uE182", // group:Mail and calendar
+    "_ui/appBarIcons/priority.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/uploadskydrive":                      "\uE183", // group:File
+    "_ui/appBarIcons/uploadskydrive.comment":             "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/gototoday":                           "\uE184", // group:Mail and calendar
+    "_ui/appBarIcons/gototoday.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/font":                                "\uE185", // group:Editing
+    "_ui/appBarIcons/font.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/fontcolor":                           "\uE186", // group:Editing
+    "_ui/appBarIcons/fontcolor.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/contact2":                            "\uE187", // group:Communications
+    "_ui/appBarIcons/contact2.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/folder":                              "\uE188", // group:File
+    "_ui/appBarIcons/folder.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/audio":                               "\uE189", // group:Media
+    "_ui/appBarIcons/audio.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/placeholder":                         "\uE18A", // group:General
+    "_ui/appBarIcons/placeholder.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/view":                                "\uE18B", // group:Layout
+    "_ui/appBarIcons/view.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/setlockscreen":                       "\uE18C", // group:System
+    "_ui/appBarIcons/setlockscreen.comment":              "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/settile":                             "\uE18D", // group:System
+    "_ui/appBarIcons/settile.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/cc":                                  "\uE190", // group:Media
+    "_ui/appBarIcons/cc.comment":                         "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/stopslideshow":                       "\uE191", // group:Media
+    "_ui/appBarIcons/stopslideshow.comment":              "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/permissions":                         "\uE192", // group:System
+    "_ui/appBarIcons/permissions.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/highlight":                           "\uE193", // group:Editing
+    "_ui/appBarIcons/highlight.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/disableupdates":                      "\uE194", // group:System
+    "_ui/appBarIcons/disableupdates.comment":             "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/unfavorite":                          "\uE195", // group:Media
+    "_ui/appBarIcons/unfavorite.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/unpin":                               "\uE196", // group:System
+    "_ui/appBarIcons/unpin.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/openlocal":                           "\uE197", // group:File
+    "_ui/appBarIcons/openlocal.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/mute":                                "\uE198", // group:Media
+    "_ui/appBarIcons/mute.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/italic":                              "\uE199", // group:Editing
+    "_ui/appBarIcons/italic.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/underline":                           "\uE19A", // group:Editing
+    "_ui/appBarIcons/underline.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/bold":                                "\uE19B", // group:Editing
+    "_ui/appBarIcons/bold.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/movetofolder":                        "\uE19C", // group:File
+    "_ui/appBarIcons/movetofolder.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/likedislike":                         "\uE19D", // group:Data
+    "_ui/appBarIcons/likedislike.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/dislike":                             "\uE19E", // group:Data
+    "_ui/appBarIcons/dislike.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/like":                                "\uE19F", // group:Data
+    "_ui/appBarIcons/like.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/alignright":                          "\uE1A0", // group:Editing
+    "_ui/appBarIcons/alignright.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/aligncenter":                         "\uE1A1", // group:Editing
+    "_ui/appBarIcons/aligncenter.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/alignleft":                           "\uE1A2", // group:Editing
+    "_ui/appBarIcons/alignleft.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/zoom":                                "\uE1A3", // group:Layout
+    "_ui/appBarIcons/zoom.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/zoomout":                             "\uE1A4", // group:Layout
+    "_ui/appBarIcons/zoomout.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/openfile":                            "\uE1A5", // group:File
+    "_ui/appBarIcons/openfile.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/otheruser":                           "\uE1A6", // group:System
+    "_ui/appBarIcons/otheruser.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/admin":                               "\uE1A7", // group:System
+    "_ui/appBarIcons/admin.comment":                      "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/street":                              "\uE1C3", // group:General
+    "_ui/appBarIcons/street.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/map":                                 "\uE1C4", // group:General
+    "_ui/appBarIcons/map.comment":                        "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/clearselection":                      "\uE1C5", // group:Data
+    "_ui/appBarIcons/clearselection.comment":             "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/fontdecrease":                        "\uE1C6", // group:Editing
+    "_ui/appBarIcons/fontdecrease.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/fontincrease":                        "\uE1C7", // group:Editing
+    "_ui/appBarIcons/fontincrease.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/fontsize":                            "\uE1C8", // group:Editing
+    "_ui/appBarIcons/fontsize.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/cellphone":                           "\uE1C9", // group:Communications
+    "_ui/appBarIcons/cellphone.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/reshare":                             "\uE1CA", // group:Communications
+    "_ui/appBarIcons/reshare.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/tag":                                 "\uE1CB", // group:Data
+    "_ui/appBarIcons/tag.comment":                        "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/repeatone":                           "\uE1CC", // group:Media
+    "_ui/appBarIcons/repeatone.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/repeatall":                           "\uE1CD", // group:Media
+    "_ui/appBarIcons/repeatall.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/outlinestar":                         "\uE1CE", // group:Data
+    "_ui/appBarIcons/outlinestar.comment":                "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/solidstar":                           "\uE1CF", // group:Data
+    "_ui/appBarIcons/solidstar.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/calculator":                          "\uE1D0", // group:General
+    "_ui/appBarIcons/calculator.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/directions":                          "\uE1D1", // group:General
+    "_ui/appBarIcons/directions.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/target":                              "\uE1D2", // group:General
+    "_ui/appBarIcons/target.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/library":                             "\uE1D3", // group:Media
+    "_ui/appBarIcons/library.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/phonebook":                           "\uE1D4", // group:Communications
+    "_ui/appBarIcons/phonebook.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/memo":                                "\uE1D5", // group:Communications
+    "_ui/appBarIcons/memo.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/microphone":                          "\uE1D6", // group:System
+    "_ui/appBarIcons/microphone.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/postupdate":                          "\uE1D7", // group:Communications
+    "_ui/appBarIcons/postupdate.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/backtowindow":                        "\uE1D8", // group:Layout
+    "_ui/appBarIcons/backtowindow.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/fullscreen":                          "\uE1D9", // group:Layout
+    "_ui/appBarIcons/fullscreen.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/newfolder":                           "\uE1DA", // group:File
+    "_ui/appBarIcons/newfolder.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/calendarreply":                       "\uE1DB", // group:Mail and calendar
+    "_ui/appBarIcons/calendarreply.comment":              "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/unsyncfolder":                        "\uE1DD", // group:File
+    "_ui/appBarIcons/unsyncfolder.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/reporthacked":                        "\uE1DE", // group:Communications
+    "_ui/appBarIcons/reporthacked.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/syncfolder":                          "\uE1DF", // group:File
+    "_ui/appBarIcons/syncfolder.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/blockcontact":                        "\uE1E0", // group:Communications
+    "_ui/appBarIcons/blockcontact.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/switchapps":                          "\uE1E1", // group:System
+    "_ui/appBarIcons/switchapps.comment":                 "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/addfriend":                           "\uE1E2", // group:Communications
+    "_ui/appBarIcons/addfriend.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/touchpointer":                        "\uE1E3", // group:System
+    "_ui/appBarIcons/touchpointer.comment":               "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/gotostart":                           "\uE1E4", // group:System
+    "_ui/appBarIcons/gotostart.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/zerobars":                            "\uE1E5", // group:System
+    "_ui/appBarIcons/zerobars.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/onebar":                              "\uE1E6", // group:System
+    "_ui/appBarIcons/onebar.comment":                     "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/twobars":                             "\uE1E7", // group:System
+    "_ui/appBarIcons/twobars.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/threebars":                           "\uE1E8", // group:System
+    "_ui/appBarIcons/threebars.comment":                  "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/fourbars":                            "\uE1E9", // group:System
+    "_ui/appBarIcons/fourbars.comment":                   "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/scan":                                "\uE294", // group:General
+    "_ui/appBarIcons/scan.comment":                       "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/preview":                             "\uE295", // group:General
+    "_ui/appBarIcons/preview.comment":                    "{Locked=qps-ploc,qps-plocm}",
+    "ui/appBarIcons/hamburger":                           "\uE700", // group:General
+    "_ui/appBarIcons/hamburger.comment":                  "{Locked=qps-ploc,qps-plocm}"
 }
 );
 // Copyright (c) Microsoft Corporation.  All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information.
@@ -5183,7 +5183,7 @@ define('WinJS/Core/_BaseUtils',[
         _traceAsyncCallbackStarting: _Trace._traceAsyncCallbackStarting,
         _traceAsyncCallbackCompleted: _Trace._traceAsyncCallbackCompleted,
 
-        _version: "4.0.0"
+        _version: "4.2.0"
     });
 
     _Base.Namespace._moduleDefine(exports, "WinJS", {
@@ -5295,16 +5295,16 @@ define('WinJS/Utilities/_Control',[
     }
 
     function setOptions(control, options) {
-        /// <signature helpKeyword="WinJS.UI.DOMEventMixin.setOptions">
-        /// <summary locid="WinJS.UI.DOMEventMixin.setOptions">
+        /// <signature helpKeyword="WinJS.UI.setOptions">
+        /// <summary locid="WinJS.UI.setOptions">
         /// Adds the set of declaratively specified options (properties and events) to the specified control.
         /// If name of the options property begins with "on", the property value is a function and the control
         /// supports addEventListener. The setOptions method calls the addEventListener method on the control.
         /// </summary>
-        /// <param name="control" type="Object" domElement="false" locid="WinJS.UI.DOMEventMixin.setOptions_p:control">
+        /// <param name="control" type="Object" domElement="false" locid="WinJS.UI.setOptions_p:control">
         /// The control on which the properties and events are to be applied.
         /// </param>
-        /// <param name="options" type="Object" domElement="false" locid="WinJS.UI.DOMEventMixin.setOptions_p:options">
+        /// <param name="options" type="Object" domElement="false" locid="WinJS.UI.setOptions_p:options">
         /// The set of options that are specified declaratively.
         /// </param>
         /// </signature>
@@ -5430,6 +5430,26 @@ define('WinJS/Utilities/_ElementUtilities',[
     }
 
     var _zoomToDuration = 167;
+    
+    // Firefox's implementation of getComputedStyle returns null when called within
+    // an iframe that is display:none. This is a bug: https://bugzilla.mozilla.org/show_bug.cgi?id=548397
+    // _getComputedStyle is a helper which is guaranteed to return an object whose keys
+    // map to strings.
+    var defaultComputedStyle = null;
+    function getDefaultComputedStyle() {
+        if (!defaultComputedStyle) {
+            defaultComputedStyle = {};
+            Object.keys(_Global.CSS2Properties.prototype).forEach(function (cssProperty) {
+                defaultComputedStyle[cssProperty] = "";
+            });
+        }
+        return defaultComputedStyle;
+    }
+    function _getComputedStyle(element, pseudoElement) {
+        // jscs:disable disallowDirectGetComputedStyle
+        return _Global.getComputedStyle(element, pseudoElement) || getDefaultComputedStyle();
+        // jscs:enable disallowDirectGetComputedStyle
+    }
 
     function removeEmpties(arr) {
         var len = arr.length;
@@ -5687,17 +5707,17 @@ define('WinJS/Utilities/_ElementUtilities',[
     }
 
     function getDimension(element, property) {
-        return convertToPixels(element, _Global.getComputedStyle(element, null)[property]);
+        return convertToPixels(element, _getComputedStyle(element, null)[property]);
     }
 
     function _convertToPrecisePixels(value) {
         return parseFloat(value) || 0;
     }
     function _getPreciseDimension(element, property) {
-        return _convertToPrecisePixels(_Global.getComputedStyle(element, null)[property]);
+        return _convertToPrecisePixels(_getComputedStyle(element, null)[property]);
     }
     function _getPreciseMargins(element) {
-        var style = _Global.getComputedStyle(element);
+        var style = _getComputedStyle(element);
         return {
             top: _convertToPrecisePixels(style.marginTop),
             right: _convertToPrecisePixels(style.marginRight),
@@ -6310,7 +6330,7 @@ define('WinJS/Utilities/_ElementUtilities',[
     }
 
     function getAdjustedScrollPosition(element) {
-        var computedStyle = _Global.getComputedStyle(element),
+        var computedStyle = _getComputedStyle(element),
             scrollLeft = element.scrollLeft;
         if (computedStyle.direction === "rtl") {
             if (!determinedRTLEnvironment) {
@@ -6330,7 +6350,7 @@ define('WinJS/Utilities/_ElementUtilities',[
 
     function setAdjustedScrollPosition(element, scrollLeft, scrollTop) {
         if (scrollLeft !== undefined) {
-            var computedStyle = _Global.getComputedStyle(element);
+            var computedStyle = _getComputedStyle(element);
             if (computedStyle.direction === "rtl") {
                 if (!determinedRTLEnvironment) {
                     determineRTLEnvironment();
@@ -6525,7 +6545,9 @@ define('WinJS/Utilities/_ElementUtilities',[
             if (mapping) {
                 switch (initType.toLowerCase()) {
                     case "pointer":
-                        arguments[2] = mapping.mspointer;
+                        if (!_Global.PointerEvent) {
+                            arguments[2] = mapping.mspointer;
+                        }
                         break;
 
                     default:
@@ -6561,6 +6583,8 @@ define('WinJS/Utilities/_ElementUtilities',[
         },
 
         _MSPointerEvent: _MSPointerEvent,
+        
+        _getComputedStyle: _getComputedStyle,
 
         _zoomToDuration: _zoomToDuration,
 
@@ -6575,7 +6599,7 @@ define('WinJS/Utilities/_ElementUtilities',[
                     var initialPos = getAdjustedScrollPosition(element);
                     var effectiveScrollLeft = (typeof element._zoomToDestX === "number" ? element._zoomToDestX : initialPos.scrollLeft);
                     var effectiveScrollTop = (typeof element._zoomToDestY === "number" ? element._zoomToDestY : initialPos.scrollTop);
-                    var cs = _Global.getComputedStyle(element);
+                    var cs = _getComputedStyle(element);
                     var scrollLimitX = element.scrollWidth - parseInt(cs.width, 10) - parseInt(cs.paddingLeft, 10) - parseInt(cs.paddingRight, 10);
                     var scrollLimitY = element.scrollHeight - parseInt(cs.height, 10) - parseInt(cs.paddingTop, 10) - parseInt(cs.paddingBottom, 10);
 
@@ -7794,7 +7818,7 @@ define('WinJS/Utilities/_ElementUtilities',[
                     element !== _Global.document.body &&
                     element !== _Global.document.documentElement) {
                 top -= element.scrollTop;
-                var dir = _Global.document.defaultView.getComputedStyle(element, null).direction;
+                var dir = _getComputedStyle(element, null).direction;
                 left -= dir !== "rtl" ? element.scrollLeft : -getAdjustedScrollPosition(element).scrollLeft;
 
                 if (element === offsetParent) {
@@ -11354,7 +11378,7 @@ define('WinJS/Utilities/_TabContainer',[
     // When it runs into a tab contained area, it rejects anything except the childFocus element so that any potentially tabbable things that the TabContainer
     // doesn't want tabbed to get ignored.
     function tabbableElementsNodeFilter(node) {
-        var nodeStyle = _Global.getComputedStyle(node);
+        var nodeStyle = _ElementUtilities._getComputedStyle(node);
         if (nodeStyle.display === "none" || nodeStyle.visibility === "hidden") {
             return _Global.NodeFilter.FILTER_REJECT;
         }
@@ -11877,7 +11901,7 @@ define('WinJS/Utilities/_KeyboardBehavior',[
                         var newIndex = this.currentIndex;
                         var maxIndex = this._element.children.length - 1;
 
-                        var rtl = _Global.getComputedStyle(this._element).direction === "rtl";
+                        var rtl = _ElementUtilities._getComputedStyle(this._element).direction === "rtl";
                         var leftStr = rtl ? Key.rightArrow : Key.leftArrow;
                         var rightStr = rtl ? Key.leftArrow : Key.rightArrow;
 
@@ -12674,6 +12698,9 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
     };
     var ClassNames = {
         focusable: "win-focusable",
+        suspended: "win-xyfocus-suspended",
+        toggleMode: "win-xyfocus-togglemode",
+        toggleModeActive: "win-xyfocus-togglemode-active",
         xboxPlatform: "win-xbox",
     };
     var CrossDomainMessageConstants = {
@@ -12711,11 +12738,12 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
      * Gets the mapping object that maps keycodes to XYFocus actions.
     **/
     exports.keyCodeMap = {
-        left: [Keys.GamepadLeftThumbstickLeft, Keys.GamepadDPadLeft, Keys.NavigationLeft],
-        right: [Keys.GamepadLeftThumbstickRight, Keys.GamepadDPadRight, Keys.NavigationRight],
-        up: [Keys.GamepadLeftThumbstickUp, Keys.GamepadDPadUp, Keys.NavigationUp],
-        down: [Keys.GamepadLeftThumbstickDown, Keys.GamepadDPadDown, Keys.NavigationDown],
-        accept: [Keys.GamepadA, Keys.NavigationAccept],
+        left: [],
+        right: [],
+        up: [],
+        down: [],
+        accept: [],
+        cancel: [],
     };
     /**
      * Gets or sets the focus root when invoking XYFocus APIs.
@@ -12741,7 +12769,12 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
     var _lastTarget;
     var _cachedLastTargetRect;
     var _historyRect;
-    var _afEnabledFrames = [];
+    /**
+     * Executes XYFocus algorithm with the given parameters. Returns true if focus was moved, false otherwise.
+     * @param direction The direction to move focus.
+     * @param keyCode The key code of the pressed key.
+     * @param (optional) A rectangle to use as the source coordinates for finding the next focusable element.
+    **/
     function _xyFocus(direction, keyCode, referenceRect) {
         // If focus has moved since the last XYFocus movement, scrolling occured, or an explicit
         // reference rectangle was given to us, then we invalidate the history rectangle.
@@ -12771,9 +12804,12 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
             updateHistoryRect(direction, result);
             _lastTarget = result.target;
             _cachedLastTargetRect = result.targetRect;
+            if (_ElementUtilities.hasClass(result.target, ClassNames.toggleMode)) {
+                _ElementUtilities.removeClass(result.target, ClassNames.toggleModeActive);
+            }
             if (result.target.tagName === "IFRAME") {
-                var index = _afEnabledFrames.lastIndexOf(result.target.contentWindow);
-                if (index >= 0) {
+                var targetIframe = result.target;
+                if (IFrameHelper.isXYFocusEnabled(targetIframe)) {
                     // If we successfully moved focus and the new focused item is an IFRAME, then we need to notify it
                     // Note on coordinates: When signaling enter, DO transform the coordinates into the child frame's coordinate system.
                     var refRect = _toIRect({
@@ -12788,7 +12824,8 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
                         direction: direction,
                         referenceRect: refRect
                     };
-                    result.target.contentWindow.postMessage(message, "*");
+                    // postMessage API is safe even in cross-domain scenarios.
+                    targetIframe.contentWindow.postMessage(message, "*");
                 }
             }
             eventSrc.dispatchEvent(EventNames.focusChanged, { previousFocusElement: activeElement, keyCode: keyCode });
@@ -12808,6 +12845,7 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
                     direction: direction,
                     referenceRect: refRect
                 };
+                // postMessage API is safe even in cross-domain scenarios.
                 _Global.parent.postMessage(message, "*");
                 return true;
             }
@@ -12918,7 +12956,7 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
             }
             var pixelOverlap = Math.min(maxReferenceCoord, maxPotentialCoord) - Math.max(minReferenceCoord, minPotentialCoord);
             var shortEdge = Math.min(maxPotentialCoord - minPotentialCoord, maxReferenceCoord - minReferenceCoord);
-            return pixelOverlap / shortEdge;
+            return shortEdge === 0 ? 0 : (pixelOverlap / shortEdge);
         }
         function calculateScore(direction, maxDistance, historyRect, referenceRect, potentialRect) {
             var score = 0;
@@ -13033,7 +13071,7 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
                 // If the current potential element is not one of the tags we consider to be focusable, then exit
                 return false;
             }
-            if (elementTagName === "IFRAME" && _afEnabledFrames.indexOf(element.contentWindow) === -1) {
+            if (elementTagName === "IFRAME" && !IFrameHelper.isXYFocusEnabled(element)) {
                 // Skip IFRAMEs without compatible XYFocus implementation
                 return false;
             }
@@ -13041,7 +13079,7 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
                 // Skip disabled WinJS controls
                 return false;
             }
-            var style = getComputedStyle(element);
+            var style = _ElementUtilities._getComputedStyle(element);
             if (element.getAttribute("tabIndex") === "-1" || style.display === "none" || style.visibility === "hidden" || element.disabled) {
                 // Skip elements that are hidden
                 // Note: We don't check for opacity === 0, because the browser cannot tell us this value accurately.
@@ -13082,104 +13120,298 @@ define('WinJS/XYFocus',["require", "exports", "./Core/_Global", "./Core/_Base", 
         }
         return _Global.document.activeElement === element;
     }
-    function _getIFrameFromWindow(win) {
-        var iframes = _Global.document.querySelectorAll("IFRAME");
-        var found = Array.prototype.filter.call(iframes, function (x) { return x.contentWindow === win; });
-        return found.length ? found[0] : null;
+    function _isToggleMode(element) {
+        if (_ElementUtilities.hasClass(element, ClassNames.toggleMode)) {
+            return true;
+        }
+        if (element.tagName === "INPUT") {
+            var inputType = element.type.toLowerCase();
+            if (inputType === "date" || inputType === "datetime" || inputType === "datetime-local" || inputType === "email" || inputType === "month" || inputType === "number" || inputType === "password" || inputType === "range" || inputType === "search" || inputType === "tel" || inputType === "text" || inputType === "time" || inputType === "url" || inputType === "week") {
+                return true;
+            }
+        }
+        else if (element.tagName === "TEXTAREA") {
+            return true;
+        }
+        return false;
     }
     function _handleKeyEvent(e) {
         if (e.defaultPrevented) {
             return;
         }
-        var keys = Object.keys(exports.keyCodeMap);
-        for (var i = 0; i < keys.length; i++) {
-            // Note: key is 'left', 'right', 'up', 'down', or 'accept'
-            var key = keys[i];
-            var keyMappings = exports.keyCodeMap[key];
-            if (keyMappings.indexOf(e.keyCode) >= 0) {
-                if (keyMappings === exports.keyCodeMap.accept) {
-                    _Global.document.activeElement && _Global.document.activeElement["click"] && _Global.document.activeElement["click"]();
+        var activeElement = _Global.document.activeElement;
+        var shouldPreventDefault = false;
+        var suspended = false;
+        var toggleMode = false;
+        var toggleModeActive = false;
+        if (activeElement) {
+            suspended = _ElementUtilities._matchesSelector(activeElement, "." + ClassNames.suspended + ", ." + ClassNames.suspended + " *");
+            toggleMode = _isToggleMode(activeElement);
+            toggleModeActive = _ElementUtilities.hasClass(activeElement, ClassNames.toggleModeActive);
+        }
+        var stateHandler = KeyHandlerStates.RestState;
+        if (suspended) {
+            stateHandler = KeyHandlerStates.SuspendedState;
+        }
+        else {
+            if (toggleMode) {
+                if (toggleModeActive) {
+                    stateHandler = KeyHandlerStates.ToggleModeActiveState;
                 }
                 else {
-                    if (_xyFocus(key, e.keyCode)) {
-                        e.preventDefault();
-                    }
+                    stateHandler = KeyHandlerStates.ToggleModeRestState;
                 }
-                return;
             }
+        }
+        if (exports.keyCodeMap.accept.indexOf(e.keyCode) !== -1) {
+            shouldPreventDefault = stateHandler.accept(activeElement);
+        }
+        else if (exports.keyCodeMap.cancel.indexOf(e.keyCode) !== -1) {
+            shouldPreventDefault = stateHandler.cancel(activeElement);
+        }
+        else {
+            var direction = "";
+            if (exports.keyCodeMap.up.indexOf(e.keyCode) !== -1) {
+                direction = "up";
+            }
+            else if (exports.keyCodeMap.down.indexOf(e.keyCode) !== -1) {
+                direction = "down";
+            }
+            else if (exports.keyCodeMap.left.indexOf(e.keyCode) !== -1) {
+                direction = "left";
+            }
+            else if (exports.keyCodeMap.right.indexOf(e.keyCode) !== -1) {
+                direction = "right";
+            }
+            if (direction) {
+                shouldPreventDefault = stateHandler.xyFocus(direction, e.keyCode);
+            }
+        }
+        if (shouldPreventDefault) {
+            e.preventDefault();
         }
     }
-    _Global.addEventListener("message", function (e) {
-        if (!e.data || !e.data[CrossDomainMessageConstants.messageDataProperty]) {
-            return;
-        }
-        var data = e.data[CrossDomainMessageConstants.messageDataProperty];
-        switch (data.type) {
-            case CrossDomainMessageConstants.register:
-                _afEnabledFrames.push(e.source);
-                break;
-            case CrossDomainMessageConstants.unregister:
-                var index = _afEnabledFrames.indexOf(e.source);
-                if (index >= 0) {
-                    _afEnabledFrames.splice(index, 1);
-                }
-                break;
-            case CrossDomainMessageConstants.dFocusEnter:
-                // The coordinates stored in data.refRect are already in this frame's coordinate system.
-                // When we get this message we will force-enable XYFocus to support scenarios where
-                // websites running WinJS are put into an IFRAME and the parent frame has XYFocus enabled.
-                _xyFocus(data.direction, -1, data.referenceRect);
-                break;
-            case CrossDomainMessageConstants.dFocusExit:
-                var iframe = _getIFrameFromWindow(e.source);
-                if (_Global.document.activeElement !== iframe) {
-                    break;
-                }
-                // The coordinates stored in data.refRect are in the IFRAME's coordinate system,
-                // so we must first transform them into this frame's coordinate system.
-                var refRect = data.referenceRect;
-                refRect.left += iframe.offsetLeft;
-                refRect.top += iframe.offsetTop;
-                _xyFocus(data.direction, -1, refRect);
-                break;
-        }
-    });
-    _BaseUtils.ready().then(function () {
-        if (_ElementUtilities.hasWinRT && _Global["Windows"] && _Global["Windows"]["Xbox"]) {
-            _ElementUtilities.addClass(_Global.document.body, ClassNames.xboxPlatform);
-        }
-        _Global.document.addEventListener("keydown", _handleKeyEvent);
-        // If we are running within an iframe, we send a registration message to the parent window
-        if (_Global.top !== _Global.window) {
-            var message = {};
-            message[CrossDomainMessageConstants.messageDataProperty] = {
-                type: CrossDomainMessageConstants.register,
-                version: 1.0
-            };
-            _Global.parent.postMessage(message, "*");
-        }
-    });
-    // Publish to WinJS namespace
-    var toPublish = {
-        focusRoot: {
-            get: function () {
-                return exports.focusRoot;
-            },
-            set: function (value) {
-                exports.focusRoot = value;
+    var KeyHandlerStates;
+    (function (KeyHandlerStates) {
+        // Element is not suspended and does not use toggle mode.
+        var RestState = (function () {
+            function RestState() {
             }
-        },
-        findNextFocusElement: findNextFocusElement,
-        keyCodeMap: exports.keyCodeMap,
-        moveFocus: moveFocus,
-        onfocuschanged: _Events._createEventProperty(EventNames.focusChanged),
-        onfocuschanging: _Events._createEventProperty(EventNames.focusChanging),
-        _xyFocus: _xyFocus
-    };
-    toPublish = _BaseUtils._merge(toPublish, _Events.eventMixin);
-    toPublish["_listeners"] = {};
-    var eventSrc = toPublish;
-    _Base.Namespace.define("WinJS.UI.XYFocus", toPublish);
+            RestState.accept = _clickElement;
+            RestState.cancel = _nop;
+            RestState.xyFocus = _xyFocus; // Prevent default when XYFocus moves focus
+            return RestState;
+        })();
+        KeyHandlerStates.RestState = RestState;
+        // Element has opted out of XYFocus.
+        var SuspendedState = (function () {
+            function SuspendedState() {
+            }
+            SuspendedState.accept = _nop;
+            SuspendedState.cancel = _nop;
+            SuspendedState.xyFocus = _nop;
+            return SuspendedState;
+        })();
+        KeyHandlerStates.SuspendedState = SuspendedState;
+        // Element uses toggle mode but is not toggled nor opted out of XYFocus.
+        var ToggleModeRestState = (function () {
+            function ToggleModeRestState() {
+            }
+            ToggleModeRestState.accept = function (element) {
+                _ElementUtilities.addClass(element, ClassNames.toggleModeActive);
+                return true;
+            };
+            ToggleModeRestState.cancel = _nop;
+            ToggleModeRestState.xyFocus = _xyFocus; // Prevent default when XYFocus moves focus
+            return ToggleModeRestState;
+        })();
+        KeyHandlerStates.ToggleModeRestState = ToggleModeRestState;
+        // Element uses toggle mode and is toggled and did not opt out of XYFocus.
+        var ToggleModeActiveState = (function () {
+            function ToggleModeActiveState() {
+            }
+            ToggleModeActiveState.cancel = function (element) {
+                element && _ElementUtilities.removeClass(element, ClassNames.toggleModeActive);
+                return true;
+            };
+            ToggleModeActiveState.accept = _clickElement;
+            ToggleModeActiveState.xyFocus = _nop;
+            return ToggleModeActiveState;
+        })();
+        KeyHandlerStates.ToggleModeActiveState = ToggleModeActiveState;
+        function _clickElement(element) {
+            element && element.click && element.click();
+            return false;
+        }
+        function _nop() {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i - 0] = arguments[_i];
+            }
+            return false;
+        }
+    })(KeyHandlerStates || (KeyHandlerStates = {}));
+    var IFrameHelper;
+    (function (IFrameHelper) {
+        // XYFocus caches registered iframes and iterates over the cache for its focus navigation implementation.
+        // However, since there is no reliable way for an iframe to unregister with its parent as it can be
+        // spontaneously taken out of the DOM, the cache can go stale. This helper module makes sure that on
+        // every query to the iframe cache, stale iframes are removed.
+        // Furthermore, merely accessing an iframe that has been garbage collected by the platform will cause an
+        // exception so each iteration during a query must be in a try/catch block.
+        var iframes = [];
+        function count() {
+            // Iterating over it causes stale iframes to be cleared from the cache.
+            _safeForEach(function () { return false; });
+            return iframes.length;
+        }
+        IFrameHelper.count = count;
+        function getIFrameFromWindow(win) {
+            var iframes = _Global.document.querySelectorAll("IFRAME");
+            var found = Array.prototype.filter.call(iframes, function (x) { return x.contentWindow === win; });
+            return found.length ? found[0] : null;
+        }
+        IFrameHelper.getIFrameFromWindow = getIFrameFromWindow;
+        function isXYFocusEnabled(iframe) {
+            var found = false;
+            _safeForEach(function (ifr) {
+                if (ifr === iframe) {
+                    found = true;
+                }
+            });
+            return found;
+        }
+        IFrameHelper.isXYFocusEnabled = isXYFocusEnabled;
+        function registerIFrame(iframe) {
+            iframes.push(iframe);
+        }
+        IFrameHelper.registerIFrame = registerIFrame;
+        function unregisterIFrame(iframe) {
+            var index = -1;
+            _safeForEach(function (ifr, i) {
+                if (ifr === iframe) {
+                    index = i;
+                }
+            });
+            if (index !== -1) {
+                iframes.splice(index, 1);
+            }
+        }
+        IFrameHelper.unregisterIFrame = unregisterIFrame;
+        function _safeForEach(callback) {
+            for (var i = iframes.length - 1; i >= 0; i--) {
+                try {
+                    var iframe = iframes[i];
+                    if (!iframe.contentWindow) {
+                        iframes.splice(i, 1);
+                    }
+                    else {
+                        callback(iframe, i);
+                    }
+                }
+                catch (e) {
+                    // Iframe has been GC'd
+                    iframes.splice(i, 1);
+                }
+            }
+        }
+    })(IFrameHelper || (IFrameHelper = {}));
+    if (_Global.document) {
+        // Note: This module is not supported in WebWorker
+        // Default mappings
+        exports.keyCodeMap.left.push(Keys.GamepadLeftThumbstickLeft, Keys.GamepadDPadLeft, Keys.NavigationLeft);
+        exports.keyCodeMap.right.push(Keys.GamepadLeftThumbstickRight, Keys.GamepadDPadRight, Keys.NavigationRight);
+        exports.keyCodeMap.up.push(Keys.GamepadLeftThumbstickUp, Keys.GamepadDPadUp, Keys.NavigationUp);
+        exports.keyCodeMap.down.push(Keys.GamepadLeftThumbstickDown, Keys.GamepadDPadDown, Keys.NavigationDown);
+        exports.keyCodeMap.accept.push(Keys.GamepadA, Keys.NavigationAccept);
+        exports.keyCodeMap.cancel.push(Keys.GamepadB, Keys.NavigationCancel);
+        _Global.addEventListener("message", function (e) {
+            // Note: e.source is the Window object of an iframe which could be hosting content
+            // from a different domain. No properties on e.source should be accessed or we may
+            // run into a cross-domain access violation exception.
+            var sourceWindow = null;
+            try {
+                // Since messages are async, by the time we get this message, the iframe could've
+                // been removed from the DOM and e.source is null or throws an exception on access.
+                sourceWindow = e.source;
+                if (!sourceWindow) {
+                    return;
+                }
+            }
+            catch (e) {
+                return;
+            }
+            if (!e.data || !e.data[CrossDomainMessageConstants.messageDataProperty]) {
+                return;
+            }
+            var data = e.data[CrossDomainMessageConstants.messageDataProperty];
+            switch (data.type) {
+                case CrossDomainMessageConstants.register:
+                    var iframe = IFrameHelper.getIFrameFromWindow(sourceWindow);
+                    iframe && IFrameHelper.registerIFrame(iframe);
+                    break;
+                case CrossDomainMessageConstants.unregister:
+                    var iframe = IFrameHelper.getIFrameFromWindow(sourceWindow);
+                    iframe && IFrameHelper.unregisterIFrame(iframe);
+                    break;
+                case CrossDomainMessageConstants.dFocusEnter:
+                    // The coordinates stored in data.refRect are already in this frame's coordinate system.
+                    _xyFocus(data.direction, -1, data.referenceRect);
+                    break;
+                case CrossDomainMessageConstants.dFocusExit:
+                    var iframe = IFrameHelper.getIFrameFromWindow(sourceWindow);
+                    if (_Global.document.activeElement !== iframe) {
+                        break;
+                    }
+                    // The coordinates stored in data.refRect are in the IFRAME's coordinate system,
+                    // so we must first transform them into this frame's coordinate system.
+                    var refRect = data.referenceRect;
+                    refRect.left += iframe.offsetLeft;
+                    refRect.top += iframe.offsetTop;
+                    _xyFocus(data.direction, -1, refRect);
+                    break;
+            }
+        });
+        _BaseUtils.ready().then(function () {
+            if (_ElementUtilities.hasWinRT && _Global["Windows"] && _Global["Windows"]["Xbox"]) {
+                _ElementUtilities.addClass(_Global.document.body, ClassNames.xboxPlatform);
+            }
+            // Subscribe on capture phase to prevent this key event from interacting with
+            // the element/control if XYFocus handled it.
+            _Global.document.addEventListener("keydown", _handleKeyEvent, true);
+            // If we are running within an iframe, we send a registration message to the parent window
+            if (_Global.top !== _Global.window) {
+                var message = {};
+                message[CrossDomainMessageConstants.messageDataProperty] = {
+                    type: CrossDomainMessageConstants.register,
+                    version: 1.0
+                };
+                _Global.parent.postMessage(message, "*");
+            }
+        });
+        // Publish to WinJS namespace
+        var toPublish = {
+            focusRoot: {
+                get: function () {
+                    return exports.focusRoot;
+                },
+                set: function (value) {
+                    exports.focusRoot = value;
+                }
+            },
+            findNextFocusElement: findNextFocusElement,
+            keyCodeMap: exports.keyCodeMap,
+            moveFocus: moveFocus,
+            onfocuschanged: _Events._createEventProperty(EventNames.focusChanged),
+            onfocuschanging: _Events._createEventProperty(EventNames.focusChanging),
+            _xyFocus: _xyFocus,
+            _iframeHelper: IFrameHelper
+        };
+        toPublish = _BaseUtils._merge(toPublish, _Events.eventMixin);
+        toPublish["_listeners"] = {};
+        var eventSrc = toPublish;
+        _Base.Namespace.define("WinJS.UI.XYFocus", toPublish);
+    }
 });
 
 // Copyright (c) Microsoft Corporation.  All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14289,6 +14521,12 @@ define('WinJS/Application',[
         },
 
         _updateKeydownCaptureListeners: function Application_TypeToSearch_updateKeydownCaptureListeners(win, add) {
+            if (!win) {
+                // This occurs when this handler gets called from an IFrame event that is no longer in the DOM
+                // and therefore does not have a valid contentWindow object.
+                return;
+            }
+
             // Register for child frame keydown events in order to support FocusOnKeyboardInput
             // when focus is in a child frame.  Also register for child frame load events so
             // it still works after frame navigations.
@@ -15091,7 +15329,7 @@ define('WinJS/Application',[
         /// </field>
         onerror: createEvent(errorET),
         /// <field type="Function" locid="WinJS.Application.onbackclick" helpKeyword="WinJS.Application.onbackclick">
-        /// Raised when the users clicks the backbutton on a Windows Phone.
+        /// Raised when the users clicks the hardware back button.
         /// </field>
         onbackclick: createEvent(backClickET)
 
@@ -15170,7 +15408,7 @@ define('WinJS/Animations/_TransitionAnimation',[
     }
 
     function resolveStyles(elem) {
-        _Global.getComputedStyle(elem, null).opacity;
+        _ElementUtilities._getComputedStyle(elem, null).opacity;
     }
 
     function copyWithEvaluation(iElem, elem) {
@@ -15695,10 +15933,11 @@ define('WinJS/Animations',[
     './Core/_Base',
     './Core/_BaseUtils',
     './Core/_WriteProfilerMark',
+    './Utilities/_ElementUtilities',
     './Animations/_Constants',
     './Animations/_TransitionAnimation',
     './Promise'
-], function animationsInit(exports, _Global, _Base, _BaseUtils, _WriteProfilerMark, _Constants, _TransitionAnimation, Promise) {
+], function animationsInit(exports, _Global, _Base, _BaseUtils, _WriteProfilerMark, _ElementUtilities, _Constants, _TransitionAnimation, Promise) {
     "use strict";
 
     var transformNames = _BaseUtils._browserStyleEquivalents["transform"];
@@ -15762,7 +16001,7 @@ define('WinJS/Animations',[
     function keyframeCallback(keyframe) {
         var keyframeRtl = keyframe + "-rtl";
         return function (i, elem) {
-            return _Global.getComputedStyle(elem).direction === "ltr" ? keyframe : keyframeRtl;
+            return _ElementUtilities._getComputedStyle(elem).direction === "ltr" ? keyframe : keyframeRtl;
         };
     }
 
@@ -15783,7 +16022,7 @@ define('WinJS/Animations',[
                 top: elemArray[i].offsetTop,
                 left: elemArray[i].offsetLeft
             };
-            var matrix = _Global.getComputedStyle(elemArray[i], null)[transformNames.scriptName].split(",");
+            var matrix = _ElementUtilities._getComputedStyle(elemArray[i], null)[transformNames.scriptName].split(",");
             if (matrix.length === 6) {
                 offset.left += parseFloat(matrix[4]);
                 offset.top += parseFloat(matrix[5]);
@@ -15885,7 +16124,7 @@ define('WinJS/Animations',[
         elemArray = makeArray(elemArray);
         origins = makeArray(origins);
         for (var i = 0, len = elemArray.length; i < len; i++) {
-            var rtl = _Global.getComputedStyle(elemArray[i]).direction === "rtl";
+            var rtl = _ElementUtilities._getComputedStyle(elemArray[i]).direction === "rtl";
             elemArray[i].style[_BaseUtils._browserStyleEquivalents["transform-origin"].scriptName] = origins[Math.min(origins.length - 1, i)][rtl ? "rtl" : "ltr"];
         }
         function onComplete() {
@@ -15907,7 +16146,7 @@ define('WinJS/Animations',[
         return function (i, elem) {
             var offset = offsetArray.getOffset(i);
             var left = offset.left;
-            if (offset.rtlflip && _Global.getComputedStyle(elem).direction === "rtl") {
+            if (offset.rtlflip && _ElementUtilities._getComputedStyle(elem).direction === "rtl") {
                 left = left.toString();
                 if (left.charAt(0) === "-") {
                     left = left.substring(1);
@@ -16414,8 +16653,8 @@ define('WinJS/Animations',[
         element.style[transformNames.scriptName] = translate + "(" + -start + "px)";
 
         // Resolve styles
-        _Global.getComputedStyle(elementClipper).opacity;
-        _Global.getComputedStyle(element).opacity;
+        _ElementUtilities._getComputedStyle(elementClipper).opacity;
+        _ElementUtilities._getComputedStyle(element).opacity;
 
         // Merge the transitions, but don't animate yet
         var clipperTransition = _BaseUtils._merge(transition, { to: translate + "(" + end + "px)" });
@@ -18405,7 +18644,7 @@ define('WinJS/Animations',[
             // and the actionArea that would appear were we to start these animations at separate times
             if (menuPositionedAbove) {
                 actionArea.style[transformNames.scriptName] = "translateY(" + deltaHeight + "px)";
-                _Global.getComputedStyle(actionArea).opacity;
+                _ElementUtilities._getComputedStyle(actionArea).opacity;
                 var transition = _BaseUtils._merge(transitionToUse, { to: "translateY(0px)" });
                 actionAreaAnimations.push({ element: actionArea, transition: transition });
             } else {
@@ -18429,8 +18668,8 @@ define('WinJS/Animations',[
             overflowArea.style[transformNames.scriptName] = "translateY(" + (menuPositionedAbove ? overflowAreaHeight : -overflowAreaHeight) + "px)";
 
             // Resolve styles on the overflowArea and overflowAreaClipper to prepare them for animation
-            _Global.getComputedStyle(overflowAreaClipper).opacity;
-            _Global.getComputedStyle(overflowArea).opacity;
+            _ElementUtilities._getComputedStyle(overflowAreaClipper).opacity;
+            _ElementUtilities._getComputedStyle(overflowArea).opacity;
 
             var animationPromises = [];
             for (var i = 0, len = actionAreaAnimations.length; i < len; i++) {
@@ -18460,7 +18699,7 @@ define('WinJS/Animations',[
             var transitionToUse = getResizeDefaultTransitions().defaultResizeShrinkTransition;
             if (menuPositionedAbove) {
                 actionArea.style[transformNames.scriptName] = "translateY(0px)";
-                _Global.getComputedStyle(actionArea).opacity;
+                _ElementUtilities._getComputedStyle(actionArea).opacity;
                 var transition = _BaseUtils._merge(transitionToUse, { to: "translateY(" + -deltaHeight + "px)" });
                 actionAreaAnimations.push({ element: actionArea, transition: transition });
             } else {
@@ -18477,8 +18716,8 @@ define('WinJS/Animations',[
             overflowArea.style[transformNames.scriptName] = "translateY(0px)";
 
             // Resolve styles on the overflowArea and overflowAreaClipper to prepare them for animation
-            _Global.getComputedStyle(overflowAreaClipper).opacity;
-            _Global.getComputedStyle(overflowArea).opacity;
+            _ElementUtilities._getComputedStyle(overflowAreaClipper).opacity;
+            _ElementUtilities._getComputedStyle(overflowArea).opacity;
 
             // Now that everything's set up, we can kick off all the animations in unision
             var animationPromises = [];
@@ -19494,7 +19733,7 @@ define('WinJS/Binding/_Data',[
     _Base.Namespace._moduleDefine(exports, "WinJS.Binding", {
         // must use long form because mixin has "get" and "set" as members, so the define
         // method thinks it's a property
-        mixin: { value: dynamicObservableMixin, enumerable: false, writable: true, configurable: true },
+        mixin: { value: dynamicObservableMixin, enumerable: true, writable: true, configurable: true },
         dynamicObservableMixin: { value: dynamicObservableMixin, enumerable: true, writable: true, configurable: true },
         observableMixin: { value: observableMixin, enumerable: true, writable: true, configurable: true },
         expandProperties: expandProperties,
@@ -22509,8 +22748,8 @@ define('WinJS/BindingTemplate',[
         /// <htmlSnippet supportsContent="true"><![CDATA[<div data-win-control="WinJS.Binding.Template"><div>Place content here</div></div>]]></htmlSnippet>
         /// <icon src="base_winjs.ui.template.12x12.png" width="12" height="12" />
         /// <icon src="base_winjs.ui.template.16x16.png" width="16" height="16" />
-        /// <resource type="javascript" src="//WinJS.4.0/js/WinJS.js" shared="true" />
-        /// <resource type="css" src="//WinJS.4.0/css/ui-dark.css" shared="true" />
+        /// <resource type="javascript" src="//WinJS.4.2/js/WinJS.js" shared="true" />
+        /// <resource type="css" src="//WinJS.4.2/css/ui-dark.css" shared="true" />
         Template: _Base.Namespace._lazy(function () {
             function interpretedRender(template, dataContext, container) {
                 _WriteProfilerMark("WinJS.Binding:templateRender" + template._profilerMarkIdentifier + ",StartTM");
@@ -26458,8 +26697,8 @@ define('WinJS/Controls/HtmlControl',[
         /// <icon src="base_winjs.ui.htmlcontrol.12x12.png" width="12" height="12" />
         /// <icon src="base_winjs.ui.htmlcontrol.16x16.png" width="16" height="16" />
         /// <htmlSnippet><![CDATA[<div data-win-control="WinJS.UI.HtmlControl" data-win-options="{ uri: 'somePage.html' }"></div>]]></htmlSnippet>
-        /// <resource type="javascript" src="//WinJS.4.0/js/WinJS.js" shared="true" />
-        /// <resource type="css" src="//WinJS.4.0/css/ui-dark.css" shared="true" />
+        /// <resource type="javascript" src="//WinJS.4.2/js/WinJS.js" shared="true" />
+        /// <resource type="css" src="//WinJS.4.2/css/ui-dark.css" shared="true" />
         HtmlControl: _Base.Class.define(function HtmlControl_ctor(element, options, complete) {
             /// <signature helpKeyword="WinJS.UI.HtmlControl.HtmlControl">
             /// <summary locid="WinJS.UI.HtmlControl.constructor">

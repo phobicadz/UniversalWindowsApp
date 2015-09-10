@@ -1,6 +1,6 @@
-﻿<div ng-controller="optionsController as oc">
+﻿<div ng-controller="optionsController as oc" style="height:100%;">
 
-    <button id="menuAnchor">Show a menu!</button>
+    <button id="menuAnchor" class="win-button">Show a menu!</button>
     <win-menu anchor="'#menuAnchor'">
         <win-menu-command label="'command the first'"></win-menu-command>
         <win-menu-command label="'command the second'"></win-menu-command>
@@ -10,6 +10,6 @@
     <win-content-dialog primary-command-text="'Primary Command'" secondary-command-text="'Secondary Command'" title="'Title'" hidden="oc.contentDialogHidden">
         Add your content here
     </win-content-dialog>
-    <button ng-click="oc.showContentDialog()">Show Dialog</button>
+    <button ng-click="oc.showContentDialog()" class="win-button">Show Dialog</button>
 
 </div>
