@@ -1,25 +1,31 @@
 ﻿<!DOCTYPE html>
-<html ng-app="defaultPage">
+<html ng-app="main">
 <head>
     <meta charset="utf-8" />
     <title>My First Univeral App</title>
 
-    <!-- WinJS references -->
+    <!-- Styles -->
+    <link href="/css/default.css" rel="stylesheet" />
     <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
+
+    <!-- WinJS references -->
     <script src="WinJS/js/base.js"></script>
     <script src="WinJS/js/ui.js"></script>
 
     <!-- AngularJS references -->
     <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
     <script src="js/angular-winjs.js"></script>
 
-    <!-- UniversalApp1 references -->
-    <link href="/css/default.css" rel="stylesheet" />
-    <script src="/js/default.js"></script>
-    <script src="/js/options.js"></script>
-    <script src="/js/header.js"></script>
+    <!-- JQuery references -->
     <script src="/js/jquery-2.1.4.min.js"></script>
 
+    <!-- App references -->
+    <script src="/js/default.js"></script>
+    <script src="/js/Page1.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/options.js"></script>
+    
 </head>
 <body role="application" class="win-type-body">
 
@@ -28,17 +34,17 @@
         <win-split-view id="splitView" win-control="splitViewControl">
             <win-split-view-pane>
                 <div class="nav-commands">
-                    <button id="btnHome" ng-click="svc.gotoHome()">Press Me</button>
+                    <button id="btnHome" ng-click="svc.gotoHome()" >Press Me</button>
+                    <button id="btnOptions" ng-click="svc.gotoOptions()">Options</button>
+
+                    
+
                 </div>
             </win-split-view-pane>
-            <win-split-view-content>
+            <win-split-view-content win-control="splitViewContent">
 
-                <button id="menuAnchor">Show a menu!</button>
-                <win-menu anchor="'#menuAnchor'">
-                    <win-menu-command label="'command the first'"></win-menu-command>
-                    <win-menu-command label="'command the second'"></win-menu-command>
-                    <win-menu-command label="'this would be a great place for ng-repeater...'"></win-menu-command>
-                </win-menu>
+                <!-- Template placeholder -->
+                <div ng-view></div>
 
             </win-split-view-content>
         </win-split-view>
