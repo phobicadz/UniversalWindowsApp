@@ -3,9 +3,25 @@
 
 
 // declare an angular module for this page with angular winjs module included
-var appRoot =  angular.module('main', ['winjs']);   
+var angularApp = angular.module('main', ['winjs','ngRoute'])
 
-appRoot.controller('splitViewController', function ($scope) {
+
+angularApp
+    .config(['$routeProvider', function ($routeProvider) {
+        //Setup routes to load partial templates from server. TemplateUrl is the location for the server view (in this case partial html files)
+        $routeProvider
+            .when('/', { templateUrl: '/', controller: 'splitViewController' })
+            .when('/fruit', { templateUrl: 'html/Page1.html', controller: 'listViewController' })
+            .when('/options', { templateUrl: 'html/options.html', controller: 'optionsController' })
+            .otherwise({ redirectTo: '/' });
+    }])
+    .controller('RootController', ['$scope', '$route', '$routeParams', '$location', function ($scope, $route, $routeParams, $location) {
+        $scope.$on('$routeChangeSuccess', function (e, current, previous) {
+            $scope.activeViewPath = $location.path();
+        });
+    }]);
+
+    angularApp.controller('splitViewController', function ($scope) {
 
         var splitViewController = this;
 
@@ -13,12 +29,17 @@ appRoot.controller('splitViewController', function ($scope) {
             $scope.splitViewControl.paneOpened = !$scope.splitViewControl.paneOpened;
         }
 
-      //  $scope.splitViewControl.onbeforeclose = function () { WinJS.Utilities.addClass($scope.splitViewControl.element, "hiding"); };
-      //  $scope.splitViewControl.onafterclose = function () { WinJS.Utilities.removeClass($scope.splitViewControl.element, "hiding"); };
+   //     $scope.splitViewControl.onbeforeclose = function () { WinJS.Utilities.addClass($scope.splitViewControl.element, "hiding"); };
+     //   $scope.splitViewControl.onafterclose = function () { WinJS.Utilities.removeClass($scope.splitViewControl.element, "hiding"); };
 
         splitViewController.gotoHome = function ()
         {
-            // Change the view here...
+            window.location("default.html#/fruit");
+        }
+
+        splitViewController.gotoOptions = function ()
+        {
+            window.location("default.html#/options");
         }
 
         //function handleResize() {
@@ -41,7 +62,6 @@ appRoot.controller('splitViewController', function ($scope) {
 	var app = WinJS.Application;
 	var nav = WinJS.Navigation;
 	var activation = Windows.ApplicationModel.Activation;
-	var splitView;
 
     // define page variables ???
 	WinJS.Namespace.define("MyFirstWUA", {
