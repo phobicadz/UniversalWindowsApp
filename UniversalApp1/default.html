@@ -1,27 +1,26 @@
 ﻿<!DOCTYPE html>
-<html ng-app="defaultPage">
+<html ng-app="main">
 <head>
     <meta charset="utf-8" />
     <title>My First Univeral App</title>
+
+    <!-- AngularJS references -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-winjs.js"></script>
 
     <!-- WinJS references -->
     <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
     <script src="WinJS/js/base.js"></script>
     <script src="WinJS/js/ui.js"></script>
 
-    <!-- AngularJS references -->
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-winjs.js"></script>
-
     <!-- UniversalApp1 references -->
     <link href="/css/default.css" rel="stylesheet" />
-    <script src="/js/default.js"></script>
-    <script src="/js/options.js"></script>
-    <script src="/js/header.js"></script>
-    <script src="/js/jquery-2.1.4.min.js"></script>
 
 </head>
 <body role="application" class="win-type-body">
+
+
+
 
     <div ng-controller="splitViewController as svc" id="app">
         <win-split-view-pane-toggle split-view="splitView" ng-click="svc.toggle()"></win-split-view-pane-toggle>
@@ -43,6 +42,9 @@
             </win-split-view-content>
         </win-split-view>
     </div>
+
+    <script src="/js/default.js"></script>
+5
 
 </body>
 </html>

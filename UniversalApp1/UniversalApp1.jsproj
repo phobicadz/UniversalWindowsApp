@@ -65,6 +65,8 @@
     <Content Include="html\header.html" />
     <Content Include="html\options.html" />
     <Content Include="html\Page1.html" />
+    <Content Include="images\angular-winjs.js" />
+    <Content Include="images\angular.min.js" />
     <Content Include="images\fruits\60Banana.png" />
     <Content Include="images\fruits\60Lemon.png" />
     <Content Include="images\fruits\60Mint.png" />
@@ -78,8 +80,7 @@
     <Content Include="images\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="images\StoreLogo.png" />
     <Content Include="images\Wide310x150Logo.scale-200.png" />
-    <Content Include="js\angular-winjs.js" />
-    <Content Include="js\angular.min.js" />
+    <Content Include="js\app.js" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
     <Content Include="js\header.js" />

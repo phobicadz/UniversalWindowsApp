@@ -3,8 +3,9 @@
 
 
 // declare an angular module for this page with angular winjs module included
-angular.module('defaultPage', ['winjs'])
-    .controller('splitViewController', function ($scope) {
+var appRoot =  angular.module('main', ['winjs']);   
+
+appRoot.controller('splitViewController', function ($scope) {
 
         var splitViewController = this;
 
