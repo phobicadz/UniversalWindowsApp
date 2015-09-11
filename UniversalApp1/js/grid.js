@@ -10,7 +10,7 @@
 
     $scope.userGrid = {
         data: 'usersList',
-        multiSelect: false,
+        multiSelect: true,
         enableColumnResize: true,
         columnDefs: [
             { field: 'firstname', displayName: 'First Name', width: '25%' },
