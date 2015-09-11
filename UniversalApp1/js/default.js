@@ -3,7 +3,7 @@
 
 
 // declare an angular module for this page with angular winjs module included
-var angularApp = angular.module('main', ['winjs','ngRoute','ngGrid'])
+var angularApp = angular.module('main', ['winjs','ngRoute','ui.grid'])
 
 
 angularApp
