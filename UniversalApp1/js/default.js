@@ -3,7 +3,7 @@
 
 
 // declare an angular module for this page with angular winjs module included
-var angularApp = angular.module('main', ['winjs','ngRoute','ngGrid'])
+var angularApp = angular.module('main', ['winjs','ngRoute','ui.grid','ui.grid.selection'])
 
 
 angularApp
@@ -43,6 +43,10 @@ angularApp
             window.location("default.html#/options");
         }
 
+         splitViewController.gotoGrid = function ()
+        {
+            window.location("default.html#/grid");
+        }
         //function handleResize() {
         //    if (window.innerWidth > 768) {
         //        splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;

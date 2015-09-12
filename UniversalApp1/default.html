@@ -39,21 +39,21 @@
                 <div class="nav-commands">
                     <table>
                         <tr>
-                            <td><button class="win-button" id="btnHome" ng-click="svc.gotoHome()">Press Me</button></td>
+                            <td style="width:30px;"><button class="win-commandicon" id="btnHome" ng-click="svc.gotoHome()"></button></td><td class="left">List View</td>
                         </tr>
                         <tr>
-                            <td><button class="win-button" id="btnOptions" ng-click="svc.gotoOptions()">Options</button></td>
+                            <td style="width:30px;"><button class="win-commandicon" id="btnOptions" ng-click="svc.gotoOptions()"></button></td><td class="Options">Options</td>
                         </tr>
+                        <tr>
+                            <td style="width:30px;"><button class="win-commandicon" id="btnGrid" ng-click="svc.gotoGrid()">Grid</button>Grid</td></tr>
                     </table>
 
-                    <a class="win-link" href="default.html#/fruit">Link me up scotty</a>
-                    <a class="win-link" href="default.html#/grid">Grid</a>
                 </div>
             </win-split-view-pane>
             <win-split-view-content win-control="splitViewContent">
 
                 <!-- Template placeholder -->
-                <div ng-view ></div>
+                <div ng-view sstyle="height:100%"></div>
 
             </win-split-view-content>
         </win-split-view>
