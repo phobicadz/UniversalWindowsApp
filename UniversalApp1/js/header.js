@@ -1,6 +1,5 @@
 ﻿angular.module('header', ['winjs'])
-    .controller('HeaderController', function () {
-
+    .controller('HeaderController', function ($scope) {
 
 
     });

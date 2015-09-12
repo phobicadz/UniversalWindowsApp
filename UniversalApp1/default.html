@@ -1,73 +1,63 @@
 ﻿<!DOCTYPE html>
-<html ng-app="todoApp">
+<html ng-app="main">
 <head>
     <meta charset="utf-8" />
     <title>My First Univeral App</title>
 
-    <!-- WinJS references -->
+    <!-- Styles -->
+    <link href="/css/default.css" rel="stylesheet" />
     <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
+    <link href="css/ng-grid.css" rel="stylesheet" />
+
+    <!-- WinJS references -->
     <script src="WinJS/js/base.js"></script>
     <script src="WinJS/js/ui.js"></script>
 
-    <!-- UniversalApp1 references -->
-    <link href="/css/default.css" rel="stylesheet" />
-    <script src="/js/default.js"></script>
-    <script src="/js/options.js"></script>
+    <!-- JQuery references -->
     <script src="/js/jquery-2.1.4.min.js"></script>
 
     <!-- AngularJS references -->
     <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
     <script src="js/angular-winjs.js"></script>
-   
-    <script src="js/todo.js"></script>
+    <script src="js/angular-ng-grid.js"></script>
+
+    <!-- App references -->
+    <script src="/js/default.js"></script>
+    <script src="/js/Page1.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/options.js"></script>
+    <script src="/js/grid.js"></script>
 
 </head>
 <body role="application" class="win-type-body">
 
-    <div ng-controller="TodoListController as todoList">
-             <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
-              [ <a href="" ng-click="todoList.archive()">archive</a> ]
-              <ul class="unstyled">
-            
-            <li ng-repeat="todo in todoList.todos">
-                          <input type="checkbox" ng-model="todo.done">
-                         <span class="done-{{todo.done}}">{{todo.text}}</span>
-                
-            </li>      
-        </ul>
-              <form ng-submit="todoList.addTodo()">
-                   <input type="text" ng-model="todoList.todoText" size="30"
-                               placeholder="add new todo here">
-                    <input class="btn-primary" type="submit" value="add">      
-        </form>
+    <div ng-controller="splitViewController as svc" id="app">
+        <win-split-view-pane-toggle split-view="splitView" ng-click="svc.toggle()"></win-split-view-pane-toggle>
+        <win-split-view id="splitView" win-control="splitViewControl">
+            <win-split-view-pane>
+                <div class="nav-commands">
+                    <table>
+                        <tr>
+                            <td><button class="win-commandicon" id="btnHome" ng-click="svc.gotoHome()"></button></td><td>List View</td>
+                        </tr>
+                        <tr>
+                            <td><button class="win-commandicon" id="btnOptions" ng-click="svc.gotoOptions()"></button></td><td>Options</td>
+                        </tr>
+                        <tr>
+                            <td><button class="win-commandicon" id="btnGrid" ng-click="svc.gotoGrid()"></button></td><td>Grid</td></tr>
+                    </table>
+
+                </div>
+            </win-split-view-pane>
+            <win-split-view-content win-control="splitViewContent">
+
+                <!-- Template placeholder -->
+                <div ng-view sstyle="height:100%"></div>
+
+            </win-split-view-content>
+        </win-split-view>
     </div>
 
-    <button id="menuAnchor">Show a menu!</button>
-    <win-menu anchor="'#menuAnchor'">
-        <win-menu-command label="'command the first'"></win-menu-command>
-        <win-menu-command label="'command the second'"></win-menu-command>
-        <win-menu-command label="'this would be a great place for ng-repeater...'"></win-menu-command>
-    </win-menu>
-
-
-
-    <div id="root" data-win-control="WinJS.UI.SplitView" data-win-options="{ paneHidden: MyFirstWUA.paneHiddenInitially }">
-        <div>
-            <button type="button" class="splitViewButton win-button"></button>
-            <div id="header" role="contentinfo" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/header.html'}"></div>
-            <div id="scenarioPane" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/options.html'}"></div>
-            <div id="footer" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/html/footer.html'}"></div>
-        </div>
-
-
-        <button type="button" class="splitViewButton win-button"></button>
-        <div id="contentWrapper">
-            <div id="contentHost"></div>
-            <div id="statusBox">
-                Status:
-                <div id="statusMessage"></div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
