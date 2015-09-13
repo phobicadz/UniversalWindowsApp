@@ -59,6 +59,8 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap.css" />
     <Content Include="css\ng-grid.css" />
     <Content Include="default.html" />
     <Content Include="html\content.html" />
@@ -84,6 +86,7 @@
     <Content Include="js\angular-route.js" />
     <Content Include="js\angular-winjs.js" />
     <Content Include="js\angular.min.js" />
+    <Content Include="js\bootstrap.js" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
     <Content Include="js\grid.js" />
@@ -91,6 +94,7 @@
     <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="js\options.js" />
     <Content Include="js\Page1.js" />
+    <Content Include="js\ui-bootstrap-tpls-0.12.0.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />

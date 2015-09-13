@@ -5,10 +5,12 @@
     <title>My First Univeral App</title>
 
     <!-- Styles -->
-    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" />
     <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
-    <link href="css/ng-grid.css" rel="stylesheet" />
-
+    <link href="/css/ng-grid.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+   
     <!-- WinJS references -->
     <script src="WinJS/js/base.js"></script>
     <script src="WinJS/js/ui.js"></script>
@@ -21,6 +23,8 @@
     <script src="js/angular-route.js"></script>
     <script src="js/angular-winjs.js"></script>
     <script src="js/angular-ng-grid.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.12.0.js"></script>
 
     <!-- App references -->
     <script src="/js/default.js"></script>
@@ -50,7 +54,7 @@
 
                 </div>
             </win-split-view-pane>
-            <win-split-view-content win-control="splitViewContent">
+            <win-split-view-content win-control="splitViewContent" class="win-splitview-content">
 
                 <!-- Template placeholder -->
                 <div ng-view sstyle="height:100%"></div>

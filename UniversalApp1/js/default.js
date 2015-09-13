@@ -3,7 +3,7 @@
 
 
 // declare an angular module for this page with angular winjs module included
-var angularApp = angular.module('main', ['winjs','ngRoute','ui.grid','ui.grid.selection'])
+var angularApp = angular.module('main', ['winjs','ngRoute','ui.grid','ui.grid.selection','ui.bootstrap'])
 
 
 angularApp
@@ -30,9 +30,6 @@ angularApp
             $scope.splitViewControl.paneOpened = !$scope.splitViewControl.paneOpened;
         }
 
-   //     $scope.splitViewControl.onbeforeclose = function () { WinJS.Utilities.addClass($scope.splitViewControl.element, "hiding"); };
-     //   $scope.splitViewControl.onafterclose = function () { WinJS.Utilities.removeClass($scope.splitViewControl.element, "hiding"); };
-
         splitViewController.gotoHome = function ()
         {
             window.location("default.html#/fruit");
@@ -46,17 +43,23 @@ angularApp
          splitViewController.gotoGrid = function ()
         {
             window.location("default.html#/grid");
+         }
+
+        function resize()
+        {
+            if (window.innerWidth > 768) {
+                $scope.splitViewControl.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.inline;
+                $scope.splitViewControl.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.inline;
+            } else {
+                $scope.splitViewControl.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.inline;
+                $scope.splitViewControl.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.overlay;
+                $scope.splitViewControl.closePane();
+            } 
         }
-        //function handleResize() {
-        //    if (window.innerWidth > 768) {
-        //        splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;
-        //        splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.inline;
-        //    } else {
-        //        splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none;
-        //        splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.overlay;
-        //        splitView.closePane();
-        //    }
-        //}
+
+        $(window).resize(resize)
+
+    //    resize();
 
     });
 
