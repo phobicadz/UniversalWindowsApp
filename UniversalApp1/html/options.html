@@ -12,4 +12,54 @@
     </win-content-dialog>
     <button ng-click="oc.showContentDialog()" class="win-button">Show Dialog</button>
 
+    <alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    <button class="win-button" data-ng-click="addAlert()">Add Alert</button>
+
+    <button class="win-button" data-ng-click="pickContacts()">Contact Picker</button>
+    <button class="win-button" data-ng-click="popToast()">Pop some toast</button>
+
+    <!-- Modal Popup demo start, note that it uses a different controller to the one defined in app.js -->
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="win-contentdialog-title">
+            <h3 class="modal-title">Modal Popup</h3>
+        </div>
+        <div class="win-contentdialog-content">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a ng-click="selected.item = item">{{ item.firstname }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item.firstname }} {{ selected.item.lastname }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="win-button" ng-click="ok()">OK</button>
+            <button class="win-button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    <!-- Modal Popup demo end -->
+
+    <button class="win-button" data-ng-click="open()">Open me!</button>
+    <button class="win-button" data-ng-click="open('lg')">Large modal</button>
+    <button class="win-button" data-ng-click="open('sm')">Small modal</button>
+
+    <div data-ng-show="selected">
+        Selection from a modal: {{ selected.firstName }} {{ selected.lastName }}
+        Tel:{{ selected.mobile }}
+    </div>
+
+    <div class="btn-group" dropdown is-open="status.isopen">
+        <button id="single-button" type="button" class="btn btn-primary" dropdown-toggle ng-disabled="disabled">
+            Button dropdown <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+            <li role="menuitem"><a href="#options">Action</a></li>
+            <li role="menuitem"><a href="#fruit">Another action</a></li>
+            <li role="menuitem"><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+
+
 </div>

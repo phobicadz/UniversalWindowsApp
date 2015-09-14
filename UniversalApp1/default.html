@@ -5,10 +5,12 @@
     <title>My First Univeral App</title>
 
     <!-- Styles -->
-    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" />
     <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
-    <link href="css/ng-grid.css" rel="stylesheet" />
-
+    <link href="/css/ng-grid.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+   
     <!-- WinJS references -->
     <script src="WinJS/js/base.js"></script>
     <script src="WinJS/js/ui.js"></script>
@@ -21,6 +23,8 @@
     <script src="js/angular-route.js"></script>
     <script src="js/angular-winjs.js"></script>
     <script src="js/angular-ng-grid.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.12.0.js"></script>
 
     <!-- App references -->
     <script src="/js/default.js"></script>
@@ -39,21 +43,21 @@
                 <div class="nav-commands">
                     <table>
                         <tr>
-                            <td><button class="win-button" id="btnHome" ng-click="svc.gotoHome()">Press Me</button></td>
+                            <td><button class="win-commandicon" id="btnHome" ng-click="svc.gotoHome()"></button></td><td>List View</td>
                         </tr>
                         <tr>
-                            <td><button class="win-button" id="btnOptions" ng-click="svc.gotoOptions()">Options</button></td>
+                            <td><button class="win-commandicon" id="btnOptions" ng-click="svc.gotoOptions()"></button></td><td>Options</td>
                         </tr>
+                        <tr>
+                            <td><button class="win-commandicon" id="btnGrid" ng-click="svc.gotoGrid()"></button></td><td>Grid</td></tr>
                     </table>
 
-                    <a class="win-link" href="default.html#/fruit">Link me up scotty</a>
-                    <a class="win-link" href="default.html#/grid">Grid</a>
                 </div>
             </win-split-view-pane>
-            <win-split-view-content win-control="splitViewContent">
+            <win-split-view-content win-control="splitViewContent" class="win-splitview-content">
 
                 <!-- Template placeholder -->
-                <div ng-view ></div>
+                <div ng-view sstyle="height:100%"></div>
 
             </win-split-view-content>
         </win-split-view>

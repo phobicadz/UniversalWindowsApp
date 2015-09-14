@@ -13,6 +13,7 @@
   -o-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
+  color: black;
 }
 .ui-grid-vertical-bar {
   position: absolute;
