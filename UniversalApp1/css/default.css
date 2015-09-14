@@ -2,6 +2,12 @@
 Copyright (c) Microsoft Corporation. All rights reserved
 */
 
+body
+{
+    /* override bootstrap setting */
+    padding-top:0px;
+}
+
 .content,
 #app {
     height: 100%;
@@ -88,5 +94,21 @@ Copyright (c) Microsoft Corporation. All rights reserved
 
 .grid {
     width: 100%;
-    height: 500px;
+    height: 600px;
+}
+
+.winbutton
+{
+    max-width:120px;
+    min-width:30px;
+}
+
+.win-commandicon
+{
+    margin-left:10px;
+}
+
+.win-splitview-content
+{
+    margin:5px;
 }
