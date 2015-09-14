@@ -13,8 +13,8 @@
     $scope.myGrid = {
         enableSorting: true,
         enableRowSelection: true,
-        selectionRowHeaderWidth: 35,
-        rowHeight: 35,
+        selectionRowHeaderWidth: '35',
+        rowHeight: '35',
         showGridFooter: true,
         columnDefs: [
             { name: 'Firstname', field: 'firstname' },
