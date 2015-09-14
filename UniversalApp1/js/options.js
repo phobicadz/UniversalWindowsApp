@@ -3,6 +3,49 @@ angularApp.controller("optionsController", function ($scope, $modal) {
 
     var optionsController = this;
 
+    var picker = new Windows.ApplicationModel.Contacts.ContactPicker();
+    picker.commitButtonText = "Select";
+
+    function pushAlert(message)
+    {
+        $scope.alerts.push({ msg: message });
+    }
+
+    $scope.popToast = function showToast()
+    {
+        var notifications = Windows.UI.Notifications;
+
+      
+
+    }
+
+    $scope.pickContacts = function()
+    {
+        
+            // Create the picker
+            var picker = new Windows.ApplicationModel.Contacts.ContactPicker();
+            picker.commitButtonText = "Select";
+            picker.desiredFieldsWithContactFieldType.append(
+                   Windows.ApplicationModel.Contacts.ContactFieldType.Email);
+
+            var emailsPromise = new WinJS.Promise(function (complete, error, progress) {
+
+                // Open the picker for the user to select contacts
+                picker.pickContactsAsync().then(function (contacts) {
+                    if (contacts.length > 0) {
+                        // Iterate through the contacts collection and do something
+                        pushAlert(contacts[0].firstName);
+                       
+                       complete(); // Call complete to exit the promise
+                    } else {
+                       complete(); // Call complete to exit the promise
+                    }
+                });
+          });
+
+            return emailsPromise;
+    }
+
     $scope.usersList = [
        { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
             { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
