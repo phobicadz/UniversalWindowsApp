@@ -1,41 +1,8 @@
-﻿angularApp.controller('gridController', ['$scope', function ($scope) {
+﻿angularApp.controller('gridController', ['$scope','Restangular','$timeout', function ($scope,Restangular,$timeout) {
 
 
-    //$scope.usersList = [];
-    $scope.usersList = [
-       { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Baxter", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Lindsey", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Baxter", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Lindsey", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Baxter", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Lindsey", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Baxter", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Lindsey", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Baxter", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Lindsey", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Baxter", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Lindsey", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Baxter", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Lindsey", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Adam", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Mabel", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" },
-            { "firstname": "Baxter", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" }
-    ];
-
+    // get all users from rest function
+    $scope.usersList = Restangular.all("user").getList().$object;
 
     $scope.myGrid = {
         enableFullRowSelection: true,
@@ -46,12 +13,12 @@
         multiSelect: false,
 
         columnDefs: [
-            { name: 'Firstname', field: 'firstname' },
-            { name: 'Lastname', field: 'lastname' },
-            { name: 'Email', field: 'email' },
-            { name: 'Mobile', field: 'mobile' }
+            { name: 'Firstname', field: 'fname' },
+            { name: 'Lastname', field: 'lname' },
+            { name: 'Email', field: 'email' }
         ],
         data: 'usersList'    
     };
 
+  
 }]);

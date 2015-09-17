@@ -3,18 +3,29 @@
 
 
 // declare an angular module for this page with angular winjs module included
-var angularApp = angular.module('main', ['winjs','ngRoute','ui.grid','ui.grid.selection','ui.bootstrap'])
+var angularApp = angular.module('main', ['winjs','restangular', 'ngRoute', 'ui.grid', 'ui.grid.selection', 'ui.bootstrap'])
 
 
 angularApp
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider','RestangularProvider', function ($routeProvider,RestangularProvider) {
         //Setup routes to load partial templates from server. TemplateUrl is the location for the server view (in this case partial html files)
         $routeProvider
             .when('/', { templateUrl: '/', controller: 'splitViewController' })
             .when('/fruit', { templateUrl: 'html/Page1.html', controller: 'listViewController' })
             .when('/options', { templateUrl: 'html/options.html', controller: 'optionsController' })
-            .when('/grid',{templateUrl:'html/grid.html',controller:'gridController'})
+            .when('/grid', { templateUrl: 'html/grid.html', controller: 'gridController' })
+            .when('/new', { controller:'createController', templateUrl:'detail.html'})
             .otherwise({ redirectTo: '/' });
+
+        RestangularProvider.setBaseUrl('http://adamandlindsey.co.uk:7000');
+        //   RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
+        RestangularProvider.setRestangularFields({
+            id: '_id'
+          });
+
+       //  RestangularProvider.setDefaultHttpFields({ cache: false });
+
+
     }])
     .controller('RootController', ['$scope', '$route', '$routeParams', '$location', function ($scope, $route, $routeParams, $location) {
         $scope.$on('$routeChangeSuccess', function (e, current, previous) {
@@ -22,6 +33,15 @@ angularApp
         });
     }]);
 
+angularApp.controller('createController', function ($scope, $location, Restangular) {
+
+    $scope.save = function () {
+        Restangular.all("user").post($scope.user).then(function (user) {
+            $location.path('/grid');
+        });
+    }
+    
+})
     angularApp.controller('splitViewController', function ($scope) {
 
         var splitViewController = this;
@@ -42,7 +62,7 @@ angularApp
 
          splitViewController.gotoGrid = function ()
         {
-            window.location("default.html#/grid");
+            window.location("default.html#/new");
          }
 
         function resize()

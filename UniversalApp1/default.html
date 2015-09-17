@@ -20,11 +20,14 @@
 
     <!-- AngularJS references -->
     <script src="js/angular.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/restangular.js"></script>
     <script src="js/angular-route.js"></script>
     <script src="js/angular-winjs.js"></script>
     <script src="js/angular-ng-grid.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/ui-bootstrap-tpls-0.12.0.js"></script>
+   
 
     <!-- App references -->
     <script src="/js/default.js"></script>
@@ -62,6 +65,47 @@
             </win-split-view-content>
         </win-split-view>
     </div>
+
+
+    <!-- CACHE FILE: detail.html -->
+    <script type="text/ng-template" id="detail.html">
+        <form name="myForm">
+            <div class="control-group" ng-class="{error: myForm.name.$invalid}">
+                <label>First Name</label>
+                <input type="text" name="name" ng-model="user.fname" required>
+                <span ng-show="myForm.name.$error.required" class="help-inline">
+                    Required
+                </span>
+            </div>
+
+            <div class="control-group" ng-class="{error: myForm.site.$invalid}">
+                <label>Last Name</label>
+                <input type="text" name="lastname" ng-model="user.lname" required>
+                <span ng-show="myForm.lastname.$error.required" class="help-inline">
+                    Required
+                </span>
+            </div>
+
+            <div class="control-group" ng-class="{error: myForm.site.$invalid}">
+                <label>Email</label>
+                <input type="text" name="email" ng-model="user.email" required>
+                <span ng-show="myForm.email.$error.required" class="help-inline">
+                    Required
+                </span>
+            </div>
+
+            <br>
+            <a href="#/" class="btn">Cancel</a>
+            <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid"
+                    class="btn btn-primary">
+                Save
+            </button>
+            <button ng-click="destroy()"
+                    ng-show="user._id" class="btn btn-danger">
+                Delete
+            </button>
+        </form>
+    </script>
 
 </body>
 </html>
