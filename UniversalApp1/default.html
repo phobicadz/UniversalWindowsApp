@@ -89,7 +89,7 @@
             <div class="control-group" ng-class="{error: myForm.site.$invalid}">
                 <label>Email</label>
                 <input type="text" name="email" ng-model="user.email" required>
-                <span ng-show="myForm.email.$error.required" class="help-inline">
+                <span ng-show="myForm.site.$error.required" class="help-inline">
                     Required
                 </span>
             </div>

@@ -7,24 +7,34 @@ var angularApp = angular.module('main', ['winjs','restangular', 'ngRoute', 'ui.g
 
 
 angularApp
-    .config(['$routeProvider','RestangularProvider', function ($routeProvider,RestangularProvider) {
+    .config(['$routeProvider','RestangularProvider', function ($routeProvider, RestangularProvider) {
         //Setup routes to load partial templates from server. TemplateUrl is the location for the server view (in this case partial html files)
         $routeProvider
-            .when('/', { templateUrl: '/', controller: 'splitViewController' })
+       //     .when('/', { templateUrl: '/', controller: 'splitViewController' })
             .when('/fruit', { templateUrl: 'html/Page1.html', controller: 'listViewController' })
             .when('/options', { templateUrl: 'html/options.html', controller: 'optionsController' })
             .when('/grid', { templateUrl: 'html/grid.html', controller: 'gridController' })
-            .when('/new', { controller:'createController', templateUrl:'detail.html'})
+            .when('/new', { controller: 'createController', templateUrl: 'detail.html' })
             .otherwise({ redirectTo: '/' });
 
         RestangularProvider.setBaseUrl('http://adamandlindsey.co.uk:7000');
         //   RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
+
+        // needed for mongodb id fields
         RestangularProvider.setRestangularFields({
             id: '_id'
           });
 
        //  RestangularProvider.setDefaultHttpFields({ cache: false });
 
+        RestangularProvider.setRequestInterceptor(function (elem, operation, what) {
+
+            if (operation === 'put') {
+                elem._id = undefined;
+                return elem;
+            }
+            return elem;
+        })
 
     }])
     .controller('RootController', ['$scope', '$route', '$routeParams', '$location', function ($scope, $route, $routeParams, $location) {
@@ -35,14 +45,20 @@ angularApp
 
 angularApp.controller('createController', function ($scope, $location, Restangular) {
 
-    $scope.save = function () {
-        Restangular.all("user").post($scope.user).then(function (user) {
-            $location.path('/grid');
+     $scope.save = function () {
+         Restangular.all('user').post($scope.user).then(function (data) {
+
+             $scope.userslist = Restangular.all('user').getList().$object;
+
+            $location.path('/fruit');
         });
     }
+
     
 })
-    angularApp.controller('splitViewController', function ($scope) {
+
+
+    angularApp.controller('splitViewController', function ($scope, $location,Restangular) {
 
         var splitViewController = this;
 
@@ -52,17 +68,17 @@ angularApp.controller('createController', function ($scope, $location, Restangul
 
         splitViewController.gotoHome = function ()
         {
-            window.location("default.html#/fruit");
+            $location.path('/fruit');
         }
 
         splitViewController.gotoOptions = function ()
         {
-            window.location("default.html#/options");
+            $location.path('/options');
         }
 
          splitViewController.gotoGrid = function ()
-        {
-            window.location("default.html#/new");
+         {
+             $location.path('/new');
          }
 
         function resize()

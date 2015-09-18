@@ -1,7 +1,6 @@
 ﻿
 angularApp.controller("optionsController", function ($scope, $modal) {
 
-    var optionsController = this;
 
     var picker = new Windows.ApplicationModel.Contacts.ContactPicker();
     picker.commitButtonText = "Select";
@@ -77,10 +76,10 @@ angularApp.controller("optionsController", function ($scope, $modal) {
             { "firstname": "Lindsey", "lastname": "Chamberlain", "email": "adam@hotmail.com", "mobile": "07734439905" }
     ];
 
-    optionsController.contentDialogHidden = true;
+    $scope.contentDialogHidden = true;
   
-    optionsController.showContentDialog = function () {
-        optionsController.contentDialogHidden = false;
+    $scope.showContentDialog = function () {
+        $scope.contentDialogHidden = false;
     }
 
     $scope.addAlert = function () {

@@ -1,4 +1,4 @@
-﻿<div ng-controller="optionsController as oc" style="height:100%;">
+﻿
 
     <button id="menuAnchor" class="win-button">Show a menu!</button>
     <win-menu anchor="'#menuAnchor'">
@@ -7,10 +7,10 @@
         <win-menu-command label="'this would be a great place for ng-repeater...'"></win-menu-command>
     </win-menu>
 
-    <win-content-dialog primary-command-text="'Ok'" secondary-command-text="'Cancel'" title="'Title'" hidden="oc.contentDialogHidden">
+    <win-content-dialog primary-command-text="'Ok'" secondary-command-text="'Cancel'" title="'Title'" hidden="contentDialogHidden">
         Add your content here
     </win-content-dialog>
-    <button ng-click="oc.showContentDialog()" class="win-button">Show Dialog</button>
+    <button ng-click="showContentDialog()" class="win-button">Show Dialog</button>
 
     <alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
     <button class="win-button" data-ng-click="addAlert()">Add Alert</button>
@@ -60,6 +60,3 @@
         </ul>
     </div>
 
-
-
-</div>
