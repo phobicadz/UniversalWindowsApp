@@ -14,21 +14,18 @@ angularApp
             .when('/fruit', { templateUrl: 'html/Page1.html', controller: 'listViewController' })
             .when('/options', { templateUrl: 'html/options.html', controller: 'optionsController' })
             .when('/grid', { templateUrl: 'html/grid.html', controller: 'gridController' })
-            .when('/new', { controller: 'createController', templateUrl: 'detail.html' })
+            .when('/new', { controller: 'listViewController', templateUrl: 'detail.html' })
             .otherwise({ redirectTo: '/' });
 
         RestangularProvider.setBaseUrl('http://adamandlindsey.co.uk:7000');
-        //   RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
+   
 
         // needed for mongodb id fields
         RestangularProvider.setRestangularFields({
             id: '_id'
           });
 
-       //  RestangularProvider.setDefaultHttpFields({ cache: false });
-
         RestangularProvider.setRequestInterceptor(function (elem, operation, what) {
-
             if (operation === 'put') {
                 elem._id = undefined;
                 return elem;
@@ -45,19 +42,9 @@ angularApp
 
 angularApp.controller('createController', function ($scope, $location, Restangular) {
 
-     $scope.save = function () {
-         Restangular.all('user').post($scope.user).then(function (data) {
-
-             $scope.userslist = Restangular.all('user').getList().$object;
-
-            $location.path('/fruit');
-        });
-    }
-
-    
 })
 
-
+     
     angularApp.controller('splitViewController', function ($scope, $location,Restangular) {
 
         var splitViewController = this;
