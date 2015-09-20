@@ -1,7 +1,7 @@
 ﻿ 
         <div class="win-scrollview">
             <div>List count: {{listdata.length}}, Selected Indexes: {{selection.toString()}}</div>
-            <win-list-view item-data-source="listdata" selection="selection" on-selection-changed="itemSelected($event)">
+            <win-list-view item-data-source="listdata" selection="selection" on-item-invoked="itemSelected($event)">
                 <win-list-view-header>This is a ListView header</win-list-view-header>
                 <win-item-template>
                     <!-- Simple template for the ListView instantiation  -->

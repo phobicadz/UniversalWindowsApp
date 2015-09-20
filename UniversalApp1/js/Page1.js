@@ -32,7 +32,19 @@
     }
 
     // listView event handlers
-    $scope.itemSelected = function ($event) { };
+    // delete the item
+    $scope.itemSelected = function ($event) {
+
+        user = $rootScope.users[$event.detail.itemIndex];
+
+        user.remove().then(function() {
+
+          $rootScope.users.splice($event.detail.itemIndex, 1);
+          $scope.listdata = new WinJS.Binding.List($rootScope.users);
+
+        });
+
+    };
   
 });
 
