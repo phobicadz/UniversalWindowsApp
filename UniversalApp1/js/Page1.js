@@ -5,6 +5,20 @@
     $scope.itemSelected = function ($event) { };
 
 
+    $scope.save = function () {
+        Restangular.all('user').post($scope.user).then(function (data) {
+
+            Restangular.all('user').getList().then(function (data) {
+
+                $scope.data = data;
+
+            });
+
+
+            $location.path('/fruit');
+        });
+    }
+
     // declare selection array
     $scope.selection = [];
 
