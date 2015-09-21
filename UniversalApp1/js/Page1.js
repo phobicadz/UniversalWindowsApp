@@ -1,5 +1,10 @@
 ﻿angularApp.controller("listViewController", function ($scope, Restangular, $location, $rootScope) {
 
+
+    function BindList() {
+        $scope.listdata = new WinJS.Binding.List($rootScope.users);
+    }
+
     // define api object
     var userService = Restangular.all('user');
 
@@ -7,29 +12,13 @@
     if ($rootScope.users == null) {
         userService.getList().then(function (data) {
             $rootScope.users = data;
-            // bind to listview
-            $scope.listdata = new WinJS.Binding.List($rootScope.users);
+            BindList();
         });
     }
     else
-    {
-        $scope.listdata = new WinJS.Binding.List($rootScope.users);
-    }
+    { BindList(); }
 
-    $scope.save = function () {
-        Restangular.all('user').post($scope.user).then(function (data) {
-
-            Restangular.all('user').getList().then(function (data) {
-
-                $scope.data = data;
-
-            });
-
-
-            $location.path('/fruit');
-        });
-    }
-
+  
     // declare selection array
     $scope.selection = [];
 
@@ -49,15 +38,18 @@
     // delete the item
     $scope.itemSelected = function ($event) {
 
-        user = $rootScope.users[$event.detail.itemIndex];
+        var index = $event.detail.itemIndex;
 
+        user = $rootScope.users[index];
         user.remove().then(function() {
+            $rootScope.users.splice(index, 1);
 
-          $rootScope.users.splice($event.detail.itemIndex, 1);
-          $scope.listdata = new WinJS.Binding.List($rootScope.users);
+            // var retVal = window.setImmediate(BindList);
+
+            // remove from listView
+            myList.winControl.itemDataSource.list.splice(index, 1);
 
         });
-
     };
   
 });
