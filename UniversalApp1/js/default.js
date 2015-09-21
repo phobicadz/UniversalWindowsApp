@@ -14,7 +14,7 @@ angularApp
             .when('/fruit', { templateUrl: 'html/Page1.html', controller: 'listViewController' })
             .when('/options', { templateUrl: 'html/options.html', controller: 'optionsController' })
             .when('/grid', { templateUrl: 'html/grid.html', controller: 'gridController' })
-            .when('/new', { controller: 'createController', templateUrl: 'detail.html' })
+            .when('/new', { controller: 'listViewController', templateUrl: 'detail.html' })
             .otherwise({ redirectTo: '/' });
 
         RestangularProvider.setBaseUrl('http://adamandlindsey.co.uk:7000');
@@ -45,14 +45,7 @@ angularApp
 
 angularApp.controller('createController', function ($scope, $location, Restangular) {
 
-     $scope.save = function () {
-         Restangular.all('user').post($scope.user).then(function (data) {
-
-             $scope.userslist = Restangular.all('user').getList().$object;
-
-            $location.path('/fruit');
-        });
-    }
+    
 
     
 })
