@@ -18,17 +18,14 @@ angularApp
             .otherwise({ redirectTo: '/' });
 
         RestangularProvider.setBaseUrl('http://adamandlindsey.co.uk:7000');
-        //   RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
+   
 
         // needed for mongodb id fields
         RestangularProvider.setRestangularFields({
             id: '_id'
           });
 
-       //  RestangularProvider.setDefaultHttpFields({ cache: false });
-
         RestangularProvider.setRequestInterceptor(function (elem, operation, what) {
-
             if (operation === 'put') {
                 elem._id = undefined;
                 return elem;
@@ -43,6 +40,11 @@ angularApp
         });
     }]);
 
+angularApp.controller('createController', function ($scope, $location, Restangular) {
+
+})
+
+     
     angularApp.controller('splitViewController', function ($scope, $location,Restangular) {
 
         var splitViewController = this;
