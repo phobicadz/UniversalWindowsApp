@@ -6,6 +6,7 @@ body
 {
     /* override bootstrap setting */
     padding-top:0px;
+  
 }
 
 .content,
@@ -105,10 +106,11 @@ body
 
 .win-commandicon
 {
-    margin-left:10px;
+    margin-left:12px;
 }
 
 .win-splitview-content
 {
-    margin:5px;
+    padding-left:5px;
+    padding-top:5px;
 }

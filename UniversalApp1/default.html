@@ -70,38 +70,38 @@
     <!-- CACHE FILE: detail.html -->
     <script type="text/ng-template" id="detail.html">
         <form name="myForm">
-            <div class="control-group" ng-class="{error: myForm.name.$invalid}">
+            <div ng-class="{error: myForm.name.$invalid}">
                 <label>First Name</label>
-                <input type="text" name="name" ng-model="user.fname" required>
+                <input class="win-textbox" type="text" name="name" ng-model="user.fname" required>
                 <span ng-show="myForm.name.$error.required" class="help-inline">
                     Required
                 </span>
             </div>
 
-            <div class="control-group" ng-class="{error: myForm.site.$invalid}">
+            <div ng-class="{error: myForm.site.$invalid}">
                 <label>Last Name</label>
-                <input type="text" name="lastname" ng-model="user.lname" required>
+                <input class="win-textbox" type="text" name="lastname" ng-model="user.lname" required>
                 <span ng-show="myForm.lastname.$error.required" class="help-inline">
                     Required
                 </span>
             </div>
 
-            <div class="control-group" ng-class="{error: myForm.site.$invalid}">
+            <div ng-class="{error: myForm.site.$invalid}">
                 <label>Email</label>
-                <input type="text" name="email" ng-model="user.email" required>
-                <span ng-show="myForm.site.$error.required" class="help-inline">
+                <input class="win-textbox" type="text" name="email" ng-model="user.email" required>
+                <span ng-show="myForm.email.$error.required" class="help-inline">
                     Required
                 </span>
             </div>
 
             <br>
-            <a href="#/" class="btn">Cancel</a>
+            <a href="#/" class="win-button">Cancel</a>
             <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid"
-                    class="btn btn-primary">
+                    class="win-button">
                 Save
             </button>
             <button ng-click="destroy()"
-                    ng-show="user._id" class="btn btn-danger">
+                    ng-show="user._id" class="win-button">
                 Delete
             </button>
         </form>
