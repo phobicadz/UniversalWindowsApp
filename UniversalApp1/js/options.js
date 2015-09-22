@@ -118,8 +118,8 @@ angularApp.controller("optionsController", function ($scope, $modal) {
 
      $scope.send = function()
      {
-         socket.emit('chat message', $('#messageText').val());
-         $('#messageText').val('');
+         socket.emit('chat message', $('#txtMessage').val());
+         $('#txtMessage').val('');
          return false;
      }
 
