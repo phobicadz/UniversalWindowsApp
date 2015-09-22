@@ -2,6 +2,7 @@
 angularApp.controller("optionsController", function ($scope, $modal) {
 
 
+    var socket = io('http://adamandlindsey.co.uk:3000');
     var picker = new Windows.ApplicationModel.Contacts.ContactPicker();
     picker.commitButtonText = "Select";
 
@@ -114,6 +115,17 @@ angularApp.controller("optionsController", function ($scope, $modal) {
              $log.info('Modal dismissed at: ' + new Date());
          });
      };
+
+     $scope.send = function()
+     {
+         socket.emit('chat message', $('#messageText').val());
+         $('#messageText').val('');
+         return false;
+     }
+
+     socket.on('chat message', function (msg) {
+         $('#messages').append($('<li>').text(msg));
+     });
 
 });
 
