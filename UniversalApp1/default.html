@@ -19,7 +19,6 @@
     <script src="/js/jquery-2.1.4.min.js"></script>
 
     <!-- AngularJS references -->
-    <script src="js/socket-io.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/restangular.js"></script>
@@ -28,7 +27,8 @@
     <script src="js/angular-ng-grid.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/ui-bootstrap-tpls-0.12.0.js"></script>
-   
+    <script src="js/socket-io.min.js"></script>
+    <script src="js/socket.js"></script>
    
 
     <!-- App references -->
@@ -48,13 +48,13 @@
                 <div class="nav-commands">
                     <table>
                         <tr>
-                            <td><button class="win-commandicon" id="btnHome" ng-click="svc.gotoHome()"></button></td><td>List View</td>
+                            <td><button class="win-commandicon" id="btnHome" ng-click="svc.gotoHome()"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button></td><td>List View</td>
                         </tr>
                         <tr>
-                            <td><button class="win-commandicon" id="btnOptions" ng-click="svc.gotoOptions()"></button></td><td>Options</td>
+                            <td><button class="win-commandicon" id="btnOptions" ng-click="svc.gotoOptions()"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span></button></td><td>Options</td>
                         </tr>
                         <tr>
-                            <td><button class="win-commandicon" id="btnGrid" ng-click="svc.gotoGrid()"></button></td><td>Grid</td></tr>
+                            <td><button class="win-commandicon" id="btnGrid" ng-click="svc.gotoGrid()"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></button></td><td>Grid</td></tr>
                     </table>
 
                 </div>
