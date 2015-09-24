@@ -45,29 +45,21 @@
         <win-split-view-pane-toggle split-view="splitView" ng-click="svc.toggle()"></win-split-view-pane-toggle>
         <win-split-view id="splitView" win-control="splitViewControl">
             <win-split-view-pane>
-                <div class="nav-commands">
-                    <table>
-                        <tr>
-                            <td><button class="win-commandicon" id="btnHome" ng-click="svc.gotoHome()"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button></td><td>List View</td>
-                        </tr>
-                        <tr>
-                            <td><button class="win-commandicon" id="btnOptions" ng-click="svc.gotoOptions()"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span></button></td><td>Options</td>
-                        </tr>
-                        <tr>
-                            <td><button class="win-commandicon" id="btnGrid" ng-click="svc.gotoGrid()"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></button></td><td>Grid</td></tr>
-                    </table>
-
+                <div class="nav-commands">  
+                    <!--see https://msdn.microsoft.com/en-us/library/windows/apps/hh770557.aspx for icon list-->           
+                     <win-split-view-command label="'Home'" icon="'videochat'" on-invoked="svc.gotoHome()"></win-split-view-command>
+                     <win-split-view-command label="'Options'" icon="'unpin'" on-invoked="svc.gotoOptions()"></win-split-view-command>
+                     <win-split-view-command label="'Edit'" icon="'zoom'" on-invoked="svc.gotoGrid()"></win-split-view-command>
                 </div>
             </win-split-view-pane>
             <win-split-view-content win-control="splitViewContent" class="win-splitview-content">
 
                 <!-- Template placeholder -->
-                <div ng-view sstyle="height:100%"></div>
+                <div ng-view style="height:100%"></div>
 
             </win-split-view-content>
         </win-split-view>
     </div>
-
 
     <!-- CACHE FILE: detail.html -->
     <script type="text/ng-template" id="detail.html">
