@@ -46,7 +46,7 @@ angularApp.controller("optionsController", function ($scope, $modal) {
                 picker.pickContactsAsync().then(function (contacts) {
                     if (contacts.length > 0) {
                         // Iterate through the contacts collection and do something
-                        pushAlert(contacts[0].firstName);
+                        $scope.$apply(function(){ pushAlert(contacts[0].firstName) });
                        
                        complete(); // Call complete to exit the promise
                     } else {
