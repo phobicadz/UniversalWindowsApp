@@ -3,8 +3,12 @@
 
 
 // declare an angular module for this page with angular winjs module included
-var angularApp = angular.module('main', ['winjs','restangular', 'ngRoute', 'ui.grid', 'ui.grid.selection', 'ui.bootstrap'])
-
+var angularApp = angular.module('main', ['winjs', 'restangular', 'ngRoute', 'ui.grid', 'ui.grid.selection', 'ui.bootstrap', 'btford.socket-io'])
+.factory('mySocket', function (socketFactory) {
+    var mySocket = socketFactory({ prefix: '', ioSocket: io.connect('http://adamandlindsey.co.uk:3000') });
+    mySocket.forward('chat message');
+    return mySocket;
+});
 
 angularApp
     .config(['$routeProvider','RestangularProvider', function ($routeProvider, RestangularProvider) {
@@ -93,6 +97,7 @@ angularApp.controller('createController', function ($scope, $location, Restangul
 	var app = WinJS.Application;
 	var nav = WinJS.Navigation;
 	var activation = Windows.ApplicationModel.Activation;
+	
 
     // define page variables ???
 	WinJS.Namespace.define("MyFirstWUA", {

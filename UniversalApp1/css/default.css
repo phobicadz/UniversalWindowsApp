@@ -114,3 +114,14 @@ body
     padding-left:5px;
     padding-top:5px;
 }
+
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages li { padding: 5px 10px; }
+#messages li:nth-child(odd) { background: #eee; color:black; }
+
+.modal-content
+{
+    background-color:#2b2b2b;
+    padding: 10px 10px 0 10px;
+    border: 1px solid #1b0a6f;
+}

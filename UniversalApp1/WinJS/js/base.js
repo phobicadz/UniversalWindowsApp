@@ -11676,7 +11676,7 @@ define('WinJS/Utilities/_KeyboardBehavior',[
     './_ElementUtilities',
     './_TabContainer'
 ], function KeyboardBehaviorInit(exports, _Global, _Base, _Control, _ElementUtilities, _TabContainer) {
-    "use strict";
+    
 
     // not supported in WebWorker
     if (!_Global.document) {
@@ -11709,7 +11709,7 @@ define('WinJS/Utilities/_KeyboardBehavior',[
     }, true);
 
     _Global.addEventListener("keydown", function () {
-        _lastInputType = InputTypes.keyboard;
+        s_lastInputType = InputTypes.keyboard;
     }, true);
 
     _Base.Namespace._moduleDefine(exports, "WinJS.UI", {

@@ -1,10 +1,17 @@
 ﻿
-angularApp.controller("optionsController", function ($scope, $modal) {
+angularApp.controller("optionsController", function ($scope, $modal, mySocket) {
 
-
-    var socket = io('http://adamandlindsey.co.uk:3000');
     var picker = new Windows.ApplicationModel.Contacts.ContactPicker();
+
+  //  mySocket.forward('chat message', $scope);
+
+  
     picker.commitButtonText = "Select";
+
+    $scope.$on('chat message', function (ev, data) {
+        $('#messages').append($('<li>').text(data));
+    });
+
 
     function pushAlert(message)
     {
@@ -46,8 +53,9 @@ angularApp.controller("optionsController", function ($scope, $modal) {
                 picker.pickContactsAsync().then(function (contacts) {
                     if (contacts.length > 0) {
                         // Iterate through the contacts collection and do something
-                        $scope.$apply(function(){ pushAlert(contacts[0].firstName) });
-                       
+
+                        $scope.$apply(function () { pushAlert(contacts[0].firstName); })
+                      
                        complete(); // Call complete to exit the promise
                     } else {
                        complete(); // Call complete to exit the promise
@@ -118,14 +126,17 @@ angularApp.controller("optionsController", function ($scope, $modal) {
 
      $scope.send = function()
      {
-         socket.emit('chat message', $('#messageText').val());
-         $('#messageText').val('');
+         mySocket.emit('chat message', $('#txtMessage').val());
+         $('#txtMessage').val('');
          return false;
      }
 
-     socket.on('chat message', function (msg) {
-         $('#messages').append($('<li>').text(msg));
-     });
+     //mySocket.on('chat message', function (msg) {
+     //    $('#messages').append($('<li>').text(msg));
+     //});
+
+    
+   
 
 });
 
