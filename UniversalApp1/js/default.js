@@ -5,8 +5,13 @@
 // declare an angular module for this page with angular winjs module included
 var angularApp = angular.module('main', ['winjs', 'restangular', 'ngRoute', 'ui.grid', 'ui.grid.selection', 'ui.bootstrap', 'btford.socket-io'])
 .factory('mySocket', function (socketFactory) {
-    var mySocket = socketFactory({ prefix: '', ioSocket: io.connect('http://adamandlindsey.co.uk:3000') });
-    mySocket.forward('chat message');
+    var mySocket = { factory: socketFactory({ prefix: '', ioSocket: io.connect('http://adamandlindsey.co.uk:3000') }), messages: [] };
+ //   mySocket.factory.forward('chat message');
+
+    mySocket.factory.on('chat message', function (data) {
+        mySocket.messages.push(data);
+    });
+
     return mySocket;
 });
 
@@ -14,7 +19,7 @@ angularApp
     .config(['$routeProvider','RestangularProvider', function ($routeProvider, RestangularProvider) {
         //Setup routes to load partial templates from server. TemplateUrl is the location for the server view (in this case partial html files)
         $routeProvider
-       //     .when('/', { templateUrl: '/', controller: 'splitViewController' })
+           // .when('/', { templateUrl: '/', controller: 'RootController' })
             .when('/fruit', { templateUrl: 'html/Page1.html', controller: 'listViewController' })
             .when('/options', { templateUrl: 'html/options.html', controller: 'optionsController' })
             .when('/grid', { templateUrl: 'html/grid.html', controller: 'gridController' })
@@ -23,7 +28,6 @@ angularApp
 
         RestangularProvider.setBaseUrl('http://adamandlindsey.co.uk:7000');
    
-
         // needed for mongodb id fields
         RestangularProvider.setRestangularFields({
             id: '_id'
@@ -38,18 +42,13 @@ angularApp
         })
 
     }])
-    .controller('RootController', ['$scope', '$route', '$routeParams', '$location', function ($scope, $route, $routeParams, $location) {
+
+    // default controller
+    angularApp.controller('splitViewController', function ($scope, $location,Restangular,mySocket) {
+
         $scope.$on('$routeChangeSuccess', function (e, current, previous) {
             $scope.activeViewPath = $location.path();
         });
-    }]);
-
-angularApp.controller('createController', function ($scope, $location, Restangular) {
-
-})
-
-     
-    angularApp.controller('splitViewController', function ($scope, $location,Restangular) {
 
         var splitViewController = this;
 

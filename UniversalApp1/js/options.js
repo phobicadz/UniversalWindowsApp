@@ -2,16 +2,19 @@
 angularApp.controller("optionsController", function ($scope, $modal, mySocket) {
 
     var picker = new Windows.ApplicationModel.Contacts.ContactPicker();
-
-  //  mySocket.forward('chat message', $scope);
-
-  
     picker.commitButtonText = "Select";
 
+    $scope.messages = mySocket.messages;
+  
     $scope.$on('chat message', function (ev, data) {
-        $('#messages').append($('<li>').text(data));
+        mySocket.messages.push(data);
     });
 
+    $scope.send = function () {
+        mySocket.factory.emit('chat message', $('#txtMessage').val());
+        $('#txtMessage').val('');
+        return false;
+    }
 
     function pushAlert(message)
     {
@@ -123,21 +126,6 @@ angularApp.controller("optionsController", function ($scope, $modal, mySocket) {
              $log.info('Modal dismissed at: ' + new Date());
          });
      };
-
-     $scope.send = function()
-     {
-         mySocket.emit('chat message', $('#txtMessage').val());
-         $('#txtMessage').val('');
-         return false;
-     }
-
-     //mySocket.on('chat message', function (msg) {
-     //    $('#messages').append($('<li>').text(msg));
-     //});
-
-    
-   
-
 });
 
 

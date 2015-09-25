@@ -1,5 +1,10 @@
 ﻿
-    <ul id="messages"></ul>
+<div class="win-scrollview">
+    <ul id="messages">
+        <li ng-repeat="message in messages">{{ message }}</li>
+    </ul>
+</div>
+
 <input class="win-textbox" type="text" id="txtMessage" placeholder="Type a message">
 <button class="win-button" ng-click="send()">Send</button>
 
