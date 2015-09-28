@@ -1,5 +1,10 @@
 ﻿
-    <ul id="messages"></ul>
+<ul id="messages">
+    <li ng-repeat="message in messages">
+       {{message}}
+    </li>
+</ul>
+
 <input class="win-textbox" type="text" id="txtMessage" placeholder="Type a message">
 <button class="win-button" ng-click="send()">Send</button>
 
