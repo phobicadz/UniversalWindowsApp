@@ -3,13 +3,14 @@ angularApp.controller("optionsController", function ($scope, $modal, mySocket) {
 
     var picker = new Windows.ApplicationModel.Contacts.ContactPicker();
 
+    $scope.messages = [];
+
   //  mySocket.forward('chat message', $scope);
 
-  
     picker.commitButtonText = "Select";
 
     $scope.$on('chat message', function (ev, data) {
-        $('#messages').append($('<li>').text(data));
+        $scope.messages.push(data);
     });
 
 
@@ -54,6 +55,7 @@ angularApp.controller("optionsController", function ($scope, $modal, mySocket) {
                     if (contacts.length > 0) {
                         // Iterate through the contacts collection and do something
 
+                        // use scope apply since this is not angular call
                         $scope.$apply(function () { pushAlert(contacts[0].firstName); })
                       
                        complete(); // Call complete to exit the promise
@@ -130,13 +132,6 @@ angularApp.controller("optionsController", function ($scope, $modal, mySocket) {
          $('#txtMessage').val('');
          return false;
      }
-
-     //mySocket.on('chat message', function (msg) {
-     //    $('#messages').append($('<li>').text(msg));
-     //});
-
-    
-   
 
 });
 
